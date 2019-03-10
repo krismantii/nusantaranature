@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Destino project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -34,6 +51,20 @@
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="domisili" class="col-md-4 col-form-label text-md-right">{{ __('Domisili') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="domisili" class="form-control{{ $errors->has('domisili') ? ' is-invalid' : '' }}" name="domisili" value="{{ old('domisili') }}" required>
+
+                                @if ($errors->has('domisili'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('domisili') }}</strong>
                                     </span>
                                 @endif
                             </div>
