@@ -40,7 +40,7 @@
 							<ul class="main_nav_list">
 								<li class="main_nav_item active"><a href="#">Home</a></li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
-								<li class="main_nav_item"><a href="aboutUs">About Us</a></li>
+								<li class="main_nav_item"><a href="offers.html">About Us</a></li>
 								<li class="main_nav_item"><a href="register">Register</a></li>
 								@guest
 								<li class="main_nav_item"><a href="login">Login</a></li>
@@ -260,7 +260,7 @@
 							<div class="top_item_content">
 								<div class="top_item_price">From $890</div>
 								<div class="top_item_text">Paris, France</div>
-								<div class="button last_button" style="text-align: center"><a href="offers.html" >Join</a></div>
+								<div class="button last_button"><a href="offers.html">Join</a></div>
 							</div>
 						</a>
 					</div>
@@ -275,7 +275,7 @@
 							<div class="top_item_content">
 								<div class="top_item_price">From $890</div>
 								<div class="top_item_text">Italian Riviera</div>
-								<div class="button last_button" style="text-align: center" ><a href="offers.html">Join</a></div>
+								<div class="button last_button"><a href="offers.html">Join</a></div>
 							</div>
 						</a>
 					</div>
@@ -290,7 +290,7 @@
 							<div class="top_item_content">
 								<div class="top_item_price">From $890</div>
 								<div class="top_item_text">Cinque Terre</div>
-								<div class="button last_button" style="text-align: center"><a href="offers.html">Join</a></div>
+								<div class="button last_button"><a href="offers.html">Join</a></div>
 							</div>
 						</a>
 					</div>
@@ -305,7 +305,7 @@
 							<div class="top_item_content">
 								<div class="top_item_price">From $890</div>
 								<div class="top_item_text">Santorini, Greece</div>
-								<div class="button last_button" style="text-align: center"><a href="offers.html">Join</a></div>
+								<div class="button last_button"><a href="offers.html">Join</a></div>
 							</div>
 						</a>	
 					</div>

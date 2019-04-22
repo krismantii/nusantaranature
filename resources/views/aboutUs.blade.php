@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Nature Nusantara</title>
+<title>About us</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/about_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
 </head>
 <body>
 
@@ -30,7 +26,8 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>Nature Nusantara</div>
+								<div>destino</div>
+								<div>travel agency</div>
 								<div class="logo_image"><img src="images/logo.png" alt=""></div>
 							</div>
 						</div>
@@ -38,7 +35,7 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="#">Home</a></li>
+                            <li class="main_nav_item active"><a href="#">Home</a></li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="aboutUs">About Us</a></li>
 								<li class="main_nav_item"><a href="register">Register</a></li>
@@ -55,7 +52,6 @@
               					@csrf
             					</form>
 								@endauth
-			
 							</ul>
 						</nav>
 
@@ -95,11 +91,23 @@
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="#">Home</a></li>
-					<li class="menu_item menu_mm"><a href="about.html">Articles</a></li>
-					<li class="menu_item menu_mm"><a href="offers.html">Campaigns</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">About Us</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+                <li class="main_nav_item active"><a href="#">Home</a></li>
+				<li class="main_nav_item"><a href="campaign">Campaign</a></li>
+				<li class="main_nav_item"><a href="aboutUs">About Us</a></li>
+				<li class="main_nav_item"><a href="register">Register</a></li>
+								@guest
+								<li class="main_nav_item"><a href="login">Login</a></li>
+								@endguest
+								@auth
+								<li class="main_nav_item"><a href="#">{{ Auth::user()->name }}</a></li>
+								<!-- <li class="main_nav_item"><a href="{{ route('logout') }}">{{ __('Logout') }}</a></li> -->
+								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              					{{ __('Logout') }}
+            					</a>
+            					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              					@csrf
+            					</form>
+								@endauth
 				</ul>
 
 				<!-- Menu Social -->
@@ -124,20 +132,35 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background" style="background-image:url(images/Gunung.jpg)"></div>
-		<div class="home_content">
-			<div class="home_content_inner">
-				<div class="home_text_large">Beauty</div>
-				<div class="home_text_small">of Indonesia</div>
+		<!-- Image by https://unsplash.com/@peecho -->
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/about_background.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content">
+						<div class="home_content_inner">
+							<div class="home_title">About us</div>
+							<div class="home_breadcrumbs">
+								<ul class="home_breadcrumbs_list">
+									<li class="home_breadcrumb"><a href="index.html">Home</a></li>
+									<li class="home_breadcrumb">About us</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+		</div>		
 	</div>
 
 	<!-- Find Form -->
 
 	<div class="find">
 		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div>
+		<div class="find_background_container prlx_parent">
+			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
+		</div>
+		<!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -182,198 +205,141 @@
 		</div>
 	</div>
 
-	<!-- article -->
+	<!-- About -->
 
-	<div class="popular">
+	<div class="about">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h2>HOT ARTICLE</h2>
+						<h2>We are an award winning Agency</h2>
+						<div>take a look at our story</div>
+					</div>
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6 about_col order-lg-1 order-2">
+					<div class="about_content">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus. Sed finibus, magna at euismod aliquet, enim justo vulputate lorem, sit amet elementum dolor eros sollicitudin dui. Sed ac magna mauris. Nullam lectus odio, viverra vel mi id, interdum imperdiet nulla. </p>
+						<div class="button about_button"><a href="#">Read More</a></div>
+					</div>
+				</div>
+				<div class="col-lg-6 about_col order-lg-2 order-1">
+					<div class="about_image">
+						<img src="images/about.jpg" alt="https://unsplash.com/@sanfrancisco">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Milestones -->
+
+	<div class="milestones">
+		<div class="milestones_background parallax-window" data-parallax="scroll" data-image-src="images/fact_background.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h2>Fun facts about our Agency</h2>
+						<div>take a look</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="milestones_text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh</p>
+					</div>
+				</div>
+					
+			</div>
+			<div class="row milestones_container">
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_1.svg" alt=""></div>
+						<div class="milestone_counter" data-end-value="17">0</div>
+						<div class="milestone_text">Mountains Climbed</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_2.svg" alt=""></div>
+						<div class="milestone_counter" data-end-value="213">0</div>
+						<div class="milestone_text">Islands Visited</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_3.svg" alt=""></div>
+						<div class="milestone_counter" data-end-value="11923">0</div>
+						<div class="milestone_text">Photos Taken</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="images/milestone_4.svg" alt=""></div>
+						<div class="milestone_counter" data-end-value="15">0</div>
+						<div class="milestone_text">Cruises Organized</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Services -->
+
+	<div class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h2>Popular services that we offer</h2>
 						<div>take a look at these offers</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
-					<div class="popular_content d-flex flex-md-row flex-column flex-wrap align-items-md-center align-items-start justify-content-md-between justify-content-start">
-						
-						<!-- Popular Item -->
-						<div class="popular_item">
-							<a href="offers.html">
-								<img src="images/popular_1.jpg" alt="image by Egzon Bytyqi">
-								<div class="popular_item_content">
-									<div class="popular_item_price">THE BEST VIEW IN JAKARTA</div>
-									<div class="popular_item_title">Jakarta</div>
-								</div>
-							</a>	
-						</div>
+			<div class="row icon_box_container">
 
-						<!-- Popular Item -->
-						<div class="popular_item">
-							<a href="artikel">
-								<img src="images/orgutan.jpg" alt="">
-								<div class="popular_item_content">
-									<div class="popular_item_price">Orang utan terlindungi, tetapi tidak dilindungi</div>
-									<div class="popular_item_title">Kalimantan</div>
-								</div>
-							</a>	
-						</div>
-
-						<!-- Popular Item -->
-						<div class="popular_item">
-							<a href="offers.html">
-								<img src="images/popular_3.jpg" alt="https://unsplash.com/@sapegin">
-								<div class="popular_item_content">
-									<div class="popular_item_price">From $890</div>
-									<div class="popular_item_title">Ireland</div>
-								</div>
-							</a>	
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<!-- Komunitas -->
-
-<div class="top">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>COMMUNITY</h2>
-						<div>take a look!</div>
-					</div>
-				</div>
-			</div>
-			<div class="row top_content">
-
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Paris, France</div>
-								<div class="button last_button" style="text-align: center"><a href="offers.html" >Join</a></div>
-							</div>
-						</a>
+				<!-- Icon Box -->
+				<div class="col-lg-4 icon_box_col">
+					<div class="icon_box">
+						<div class="icon_box_image"><img src="images/service_1.svg" class="svg" alt="https://www.flaticon.com/authors/monkik"></div>
+						<div class="icon_box_title">Weekend trips</div>
+						<p class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis.</p>
+						<a href="#" class="icon_box_more">Read More</a>
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_2.jpg" alt="https://unsplash.com/@jenspeter"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Italian Riviera</div>
-								<div class="button last_button" style="text-align: center" ><a href="offers.html">Join</a></div>
-							</div>
-						</a>
+				<!-- Icon Box -->
+				<div class="col-lg-4 icon_box_col">
+					<div class="icon_box">
+						<div class="icon_box_image"><img src="images/service_2.svg" class="svg" alt="https://www.flaticon.com/authors/monkik"></div>
+						<div class="icon_box_title">Fun leisure trips</div>
+						<p class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis.</p>
+						<a href="#" class="icon_box_more">Read More</a>
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_3.jpg" alt="https://unsplash.com/@anikindimitry"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Cinque Terre</div>
-								<div class="button last_button" style="text-align: center"><a href="offers.html">Join</a></div>
-							</div>
-						</a>
+				<!-- Icon Box -->
+				<div class="col-lg-4 icon_box_col">
+					<div class="icon_box">
+						<div class="icon_box_image"><img src="images/service_3.svg" class="svg" alt="https://www.flaticon.com/authors/monkik"></div>
+						<div class="icon_box_title">Plane tickets</div>
+						<p class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis.</p>
+						<a href="#" class="icon_box_more">Read More</a>
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Santorini, Greece</div>
-								<div class="button last_button" style="text-align: center"><a href="offers.html">Join</a></div>
-							</div>
-						</a>	
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Special -->
-
-	<div class="special">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>CAMPAIGN</h2>
-						<div>Untuk melindungi flora dan fauna kita, ayo kontribusi di campaign ini!</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="special_content">
-			<div class="special_slider_container">
-				<div class="owl-carousel owl-theme special_slider">
-					
-					<!-- Special Offers Item -->
-					<div class="owl-item">
-						<div class="special_item">
-							<div class="special_item_background text-center"><img src="images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
-							<div class="special_item_content text-center">
-								<div class="special_category">Visiting</div>
-								<div class="special_title"><a href="offers.html">Indonesia</a></div>
-								<div class="button last_button"><a href="offers.html">Donate</a></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Special Offers Item -->
-					<div class="owl-item">
-						<div class="special_item d-flex flex-column align-items-center justify-content-center">
-							<div class="special_item_background text-center"><img src="images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
-							<div class="special_item_content text-center">
-								<div class="special_category">Culture</div>
-								<div class="special_title"><a href="offers.html">India</a></div>
-								<div class="button last_button"><a href="offers.html">Donate</a></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Special Offers Item -->
-					<div class="owl-item">
-						<div class="special_item d-flex flex-column align-items-center justify-content-center">
-							<div class="special_item_background text-center"><img src="images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
-							<div class="special_item_content text-center">
-								<div class="special_category">Sunbathing</div>
-								<div class="special_title"><a href="offers.html">Thailand</a></div>
-								<div class="button last_button"><a href="offers.html">Donate</a></div>
-							</div>
-						</div> 
-					</div>
-
-
-				</div>
-
-				<div class="special_slider_nav d-flex flex-column align-items-center justify-content-center">
-					<img src="images/special_slider.png" alt="">
-				</div>
 			</div>
 		</div>
 	</div>
@@ -480,10 +446,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/about_custom.js"></script>
 </body>
 </html>
