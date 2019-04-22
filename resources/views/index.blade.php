@@ -42,7 +42,20 @@
 								<li class="main_nav_item"><a href="about.html">Campaign</a></li>
 								<li class="main_nav_item"><a href="offers.html">About Us</a></li>
 								<li class="main_nav_item"><a href="news.html">Contact</a></li>
+								@guest
 								<li class="main_nav_item"><a href="login">Login</a></li>
+								@endguest
+								@auth
+								<li class="main_nav_item"><a href="#">{{ Auth::user()->name }}</a></li>
+								<!-- <li class="main_nav_item"><a href="{{ route('logout') }}">{{ __('Logout') }}</a></li> -->
+								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              					{{ __('Logout') }}
+            					</a>
+            					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              					@csrf
+            					</form>
+								@endauth
+			
 							</ul>
 						</nav>
 
