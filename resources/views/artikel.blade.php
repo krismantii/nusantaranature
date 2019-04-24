@@ -56,6 +56,7 @@
 							</ul>
 						</nav>
 
+<<<<<<< HEAD
 
 						<!-- Modal Login -->
 						<div id="myLogin" class="modal fade" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
@@ -226,6 +227,8 @@
 					</div>
 					<!-- end modal daftar -->
 
+=======
+>>>>>>> a7d7fadf2cca94925ead73fe93ac3748da1eff27
 						<!-- Search -->
 						<div class="search">
 							<form action="#" class="search_form">
