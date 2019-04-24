@@ -38,7 +38,6 @@
                                 <li class="main_nav_item active"><a href="campaign">Campaign</a></li>
                                 <li class="main_nav_item"><a href="artikel">Article</a></li>
 																
-<<<<<<< HEAD
 								@guest
 								<li class="main_nav_item" data-toggle="modal" data-target="#myRegister"><a href="#">Register</a></li>								
 								<li class="main_nav_item"><a href="#" data-toggle="modal" data-target="#myLogin">Login</a></li>
@@ -49,18 +48,6 @@
 								{{ __('Logout') }}
 								</a>	
 																
-=======
-                                @guest
-                                <li class="main_nav_item"><a href="register">Register</a></li>
-								<li class="main_nav_item"><a href="login">Login</a></li>
-								@endguest
-								@auth
-								<li class="main_nav_item"><a href="#">{{ Auth::user()->name }}</a></li>
-								<!-- <li class="main_nav_item"><a href="{{ route('logout') }}">{{ __('Logout') }}</a></li> -->
-								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              					{{ __('Logout') }}
-            					</a>
->>>>>>> a7d7fadf2cca94925ead73fe93ac3748da1eff27
             					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               					@csrf
             					</form>
@@ -68,7 +55,6 @@
 							</ul>
 						</nav>
 
-<<<<<<< HEAD
 
 						<!-- Modal Login -->
 						<div id="myLogin" class="modal fade" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
@@ -239,8 +225,6 @@
 					</div>
 					<!-- end modal daftar -->
 					
-=======
->>>>>>> a7d7fadf2cca94925ead73fe93ac3748da1eff27
 						<!-- Search -->
 						<div class="search">
 							<form action="#" class="search_form">

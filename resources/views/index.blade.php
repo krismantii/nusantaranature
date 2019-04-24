@@ -298,13 +298,8 @@
 		<div class="home_background" style="background-image:url(images/Gunung.jpg)"></div>
 		<div class="home_content">
 			<div class="home_content_inner">
-<<<<<<< HEAD
 				<div class="home_text_large">Beauty</div>
 				<div class="home_text_small">of Indonesia</div>
-=======
-				<div class="home_text_large">Indonesia</div>
-				<div class="home_text_small">Beauty of Indonesia</div>
->>>>>>> a7d7fadf2cca94925ead73fe93ac3748da1eff27
 			</div>
 		</div>
 	</div>
