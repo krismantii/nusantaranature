@@ -38,26 +38,197 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="#">Home</a></li>
+								<li class="main_nav_item active"><a href="/">Home</a></li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
-								<li class="main_nav_item"><a href="aboutUs">About Us</a></li>
-								<li class="main_nav_item"><a href="register">Register</a></li>
+								<li class="main_nav_item"><a href="artikel">Article</a></li>
+								
 								@guest
-								<li class="main_nav_item"><a href="login">Login</a></li>
+								<li class="main_nav_item" data-toggle="modal" data-target="#myRegister"><a href="#">Register</a></li>								
+								<li class="main_nav_item"><a href="#" data-toggle="modal" data-target="#myLogin">Login</a></li>
 								@endguest
 								@auth
-								<li class="main_nav_item"><a href="#">{{ Auth::user()->name }}</a></li>
-								<!-- <li class="main_nav_item"><a href="{{ route('logout') }}">{{ __('Logout') }}</a></li> -->
+								<li class="main_nav_item"><a href="profil">{{ Auth::user()->name }}</a></li>
 								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              					{{ __('Logout') }}
-            					</a>
+								{{ __('Logout') }}
+								</a>	
+																
             					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               					@csrf
             					</form>
 								@endauth
 			
 							</ul>
-						</nav>
+						</nav>	
+ 
+						<!-- Modal Login -->
+				<div id="myLogin" class="modal fade" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+  					<div class="modal-dialog" role="document">
+
+							<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="loginModalLabel">Login</h4>
+								<button type="button" name="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span></button>
+							</div>
+							<div class="modal-body">
+								<form method="POST" action="{{ route('login') }}">
+								@csrf
+
+								<div class="form-group row">
+									<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+									<div class="col-md-6">
+										<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+										@if ($errors->has('email'))
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $errors->first('email') }}</strong>
+											</span>
+										@endif
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+									<div class="col-md-6">
+										<input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+										@if ($errors->has('password'))
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $errors->first('password') }}</strong>
+											</span>
+										@endif
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-6 offset-md-4">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+											<label class="form-check-label" for="remember">
+												{{ __('Remember Me') }}
+											</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group row mb-0">
+									<div class="col-md-8 offset-md-4">
+										<button type="submit" class="btn btn-primary">
+											{{ __('Login') }}
+										</button>
+
+										@if (Route::has('password.request'))
+											<a class="btn btn-link" href="{{ route('password.request') }}">
+												{{ __('Forgot Your Password?') }}
+											</a>
+										@endif
+									</div>
+								</div>
+								</form>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+						<!-- End Modal Login -->
+
+				<!-- Modal Register -->
+					<div id="myRegister" class="modal fade" data-backdrop="false" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Register</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+						<form method="POST" action="{{ route('register') }}">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="domisili" class="col-md-4 col-form-label text-md-right">{{ __('Domisili') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="domisili" class="form-control{{ $errors->has('domisili') ? ' is-invalid' : '' }}" name="domisili" value="{{ old('domisili') }}" required>
+
+                                @if ($errors->has('domisili'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('domisili') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+						</div>
+						
+						</div>
+					</div>
+					</div>
+					<!-- end modal daftar -->
+
 
 						<!-- Search -->
 						<div class="search">
@@ -127,8 +298,8 @@
 		<div class="home_background" style="background-image:url(images/Gunung.jpg)"></div>
 		<div class="home_content">
 			<div class="home_content_inner">
-				<div class="home_text_large">Beauty</div>
-				<div class="home_text_small">of Indonesia</div>
+				<div class="home_text_large">Indonesia</div>
+				<div class="home_text_small">Beauty of Indonesia</div>
 			</div>
 		</div>
 	</div>
@@ -153,9 +324,8 @@
 							<div class="find_item">
 								<div>Adventure type:</div>
 								<select name="adventure" id="adventure" class="dropdown_item_select find_input">
-									<option>Categories</option>
-									<option>Categories</option>
-									<option>Categories</option>
+									<option>Flora</option>
+									<option>Fauna</option>
 								</select>
 							</div>
 							<div class="find_item">
@@ -485,5 +655,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

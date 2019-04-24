@@ -22,3 +22,4 @@ Route::get('/aboutUs', 'aboutUsController@index')->name('abaoutUs');
 Route::get('/campaign', 'campaignController@index')->name('campaign');
 Route::get('/profil', 'profilController@index')->name('profil');
 Route::get('/artikel', 'artikelController@index')->name('artikel');
+Route::get('/detailcamp', 'detailcampController@index')->name('detailcamp');

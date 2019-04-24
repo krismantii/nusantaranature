@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Nature Nusantara</title>
+<title>News</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/news_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
 </head>
 <body>
 
@@ -38,19 +34,20 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="#">Home</a></li>
+								<li class="main_nav_item"><a href="/">Home</a></li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
-								<li class="main_nav_item"><a href="offers.html">About Us</a></li>
-								<li class="main_nav_item"><a href="register">Register</a></li>
+								<li class="main_nav_item"><a href="artikel">Article</a></li>
+								
 								@guest
-								<li class="main_nav_item"><a href="login">Login</a></li>
+								<li class="main_nav_item" data-toggle="modal" data-target="#myRegister"><a href="#">Register</a></li>								
+								<li class="main_nav_item"><a href="#" data-toggle="modal" data-target="#myLogin">Login</a></li>
 								@endguest
 								@auth
-								<li class="main_nav_item"><a href="#">{{ Auth::user()->name }}</a></li>
-								<!-- <li class="main_nav_item"><a href="{{ route('logout') }}">{{ __('Logout') }}</a></li> -->
+								<li class="main_nav_item"><a href="profil">{{ Auth::user()->name }}</a></li>
 								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              					{{ __('Logout') }}
-            					</a>
+								{{ __('Logout') }}
+								</a>	
+																
             					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               					@csrf
             					</form>
@@ -95,11 +92,11 @@
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="#">Home</a></li>
-					<li class="menu_item menu_mm"><a href="about.html">Articles</a></li>
-					<li class="menu_item menu_mm"><a href="offers.html">Campaigns</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">About Us</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+					<li class="menu_item menu_mm"><a href="/">Home</a></li>
+					<li class="menu_item menu_mm"><a href="artikel">Articles</a></li>
+					<li class="menu_item menu_mm"><a href="campaign">Campaigns</a></li>
+					<li class="menu_item menu_mm"><a href="aboutUs">About Us</a></li>
+					<li class="menu_item menu_mm"><a href="contact">Contact</a></li>
 				</ul>
 
 				<!-- Menu Social -->
@@ -124,20 +121,35 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background" style="background-image:url(images/Gunung.jpg)"></div>
-		<div class="home_content">
-			<div class="home_content_inner">
-				<div class="home_text_large">Beauty</div>
-				<div class="home_text_small">of Indonesia</div>
+		<!-- Image by https://unsplash.com/@peecho -->
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/news.jpg" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_content">
+						<div class="home_content_inner">
+							<div class="home_title">News</div>
+							<div class="home_breadcrumbs">
+								<ul class="home_breadcrumbs_list">
+									<li class="home_breadcrumb"><a href="index.html">Home</a></li>
+									<li class="home_breadcrumb">News</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+		</div>		
 	</div>
 
 	<!-- Find Form -->
 
 	<div class="find">
 		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div>
+		<div class="find_background_container prlx_parent">
+			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
+		</div>
+		<!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -182,198 +194,164 @@
 		</div>
 	</div>
 
-	<!-- article -->
+	<!-- News -->
 
-	<div class="popular">
+	<div class="news">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>HOT ARTICLE</h2>
-						<div>take a look at these offers</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="popular_content d-flex flex-md-row flex-column flex-wrap align-items-md-center align-items-start justify-content-md-between justify-content-start">
+
+				<!-- News Posts -->
+				<div class="col-lg-9">
+					<div class="news_posts">
 						
-						<!-- Popular Item -->
-						<div class="popular_item">
-							<a href="offers.html">
-								<img src="images/popular_1.jpg" alt="image by Egzon Bytyqi">
-								<div class="popular_item_content">
-									<div class="popular_item_price">THE BEST VIEW IN JAKARTA</div>
-									<div class="popular_item_title">Jakarta</div>
+						<!-- News Post -->
+						<div class="news_post">
+							<div class="post_title"><a href="#">Top destinations in Europe</a></div>
+							<div class="post_meta">
+								<ul>
+									<li><a href="#">by admin</a></li>
+									<li>january 31, 2018</li>
+									<li><a href="#">3 comments</a></li>
+								</ul>
+							</div>
+							<div class="post_image">
+								<img src="images/news_1.jpg" alt="https://unsplash.com/@simonmigaj">
+								<a href="#"><div class="post_image_box text-center">+</div></a>
+							</div>
+							<div class="post_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post">
+							<div class="post_title"><a href="#">Tips & tricks to have a perfect vacation</a></div>
+							<div class="post_meta">
+								<ul>
+									<li><a href="#">by admin</a></li>
+									<li>january 31, 2018</li>
+									<li><a href="#">3 comments</a></li>
+								</ul>
+							</div>
+							<div class="post_image">
+								<img src="images/news_2.jpg" alt="https://unsplash.com/@mfggomez">
+								<a href="#"><div class="post_image_box text-center">+</div></a>
+							</div>
+							<div class="post_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post">
+							<div class="post_title"><a href="#">Top destinations in Europe</a></div>
+							<div class="post_meta">
+								<ul>
+									<li><a href="#">by admin</a></li>
+									<li>january 31, 2018</li>
+									<li><a href="#">3 comments</a></li>
+								</ul>
+							</div>
+							<div class="post_image">
+								<img src="images/news_3.jpg" alt="https://unsplash.com/@claudiotrigueros">
+								<a href="#"><div class="post_image_box text-center">+</div></a>
+							</div>
+							<div class="post_text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="col-lg-3">
+					<div class="sidebar">
+						<div class="sidebar_search">
+							<input type="search" class="sidebar_search_input" placeholder="Search">
+						</div>
+
+						<!-- Featured Posts -->
+						<div class="sidebar_featured">
+
+							<!-- Featured Post -->
+							<div class="sidebar_featured_post">
+								<div class="sidebar_featured_image"><img src="images/sidebar_featured_1.jpg" alt=""></div>
+								<div class="sidebar_featured_title"><a href="#">Top destinations in Europe</a></div>
+								<div class="sidebar_featured_meta">
+									<ul>
+										<li><a href="#">by admin</a></li>
+										<li>january 31, 2018</li>
+										<li><a href="#">3 comments</a></li>
+									</ul>
 								</div>
-							</a>	
-						</div>
+							</div>
 
-						<!-- Popular Item -->
-						<div class="popular_item">
-							<a href="artikel">
-								<img src="images/orgutan.jpg" alt="">
-								<div class="popular_item_content">
-									<div class="popular_item_price">Orang utan terlindungi, tetapi tidak dilindungi</div>
-									<div class="popular_item_title">Kalimantan</div>
+							<!-- Featured Post -->
+							<div class="sidebar_featured_post">
+								<div class="sidebar_featured_image"><img src="images/sidebar_featured_2.jpg" alt=""></div>
+								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
+								<div class="sidebar_featured_meta">
+									<ul>
+										<li><a href="#">by admin</a></li>
+										<li>january 31, 2018</li>
+										<li><a href="#">3 comments</a></li>
+									</ul>
 								</div>
-							</a>	
-						</div>
+							</div>
 
-						<!-- Popular Item -->
-						<div class="popular_item">
-							<a href="offers.html">
-								<img src="images/popular_3.jpg" alt="https://unsplash.com/@sapegin">
-								<div class="popular_item_content">
-									<div class="popular_item_price">From $890</div>
-									<div class="popular_item_title">Ireland</div>
+							<!-- Featured Post -->
+							<div class="sidebar_featured_post">
+								<div class="sidebar_featured_image"><img src="images/sidebar_featured_3.jpg" alt=""></div>
+								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
+								<div class="sidebar_featured_meta">
+									<ul>
+										<li><a href="#">by admin</a></li>
+										<li>january 31, 2018</li>
+										<li><a href="#">3 comments</a></li>
+									</ul>
 								</div>
-							</a>	
+							</div>
+
 						</div>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+						<!-- Offers -->
+						<div class="sidebar_offers">
 
-<!-- Komunitas -->
-
-<div class="top">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>COMMUNITY</h2>
-						<div>take a look!</div>
-					</div>
-				</div>
-			</div>
-			<div class="row top_content">
-
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Paris, France</div>
-								<div class="button last_button"><a href="offers.html">Join</a></div>
+							<!-- Offer -->
+							<div class="sidebar_offer">
+								<div class="sidebar_offer_background" style="background-image:url(images/offer_1.jpg)"></div>
+								<div class="sidebar_offer_content">
+									<div class="sidebar_offer_destination">bali</div>
+									<div class="sidebar_offer_percent">38%</div>
+									<div class="sidebar_offer_title">Last Minute Offer</div>
+									<div class="sidebar_offer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris.</div>
+									<div class="sidebar_offer_button"><a href="offers.html">See Offer</a></div>
+								</div>
 							</div>
-						</a>
-					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_2.jpg" alt="https://unsplash.com/@jenspeter"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Italian Riviera</div>
-								<div class="button last_button"><a href="offers.html">Join</a></div>
+							<!-- Offer -->
+							<div class="sidebar_offer">
+								<div class="sidebar_offer_background" style="background-image:url(images/offer_2.jpg)"></div>
+								<div class="sidebar_offer_content">
+									<div class="sidebar_offer_destination">bali</div>
+									<div class="sidebar_offer_percent">25%</div>
+									<div class="sidebar_offer_title">Last Minute Offer</div>
+									<div class="sidebar_offer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris.</div>
+									<div class="sidebar_offer_button"><a href="offers.html">See Offer</a></div>
+								</div>
 							</div>
-						</a>
-					</div>
-				</div>
 
-				<div class="col-lg-3 col-md-6 top_col">
+						</div>
 
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_3.jpg" alt="https://unsplash.com/@anikindimitry"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Cinque Terre</div>
-								<div class="button last_button"><a href="offers.html">Join</a></div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 top_col">
-
-					<!-- Top Destination Item -->
-					<div class="top_item">
-						<a href="#">
-							<div class="top_item_image"><img src="images/top_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
-							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Santorini, Greece</div>
-								<div class="button last_button"><a href="offers.html">Join</a></div>
-							</div>
-						</a>	
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Special -->
-
-	<div class="special">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>CAMPAIGN</h2>
-						<div>Untuk melindungi flora dan fauna kita, ayo kontribusi di campaign ini!</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="special_content">
-			<div class="special_slider_container">
-				<div class="owl-carousel owl-theme special_slider">
-					
-					<!-- Special Offers Item -->
-					<div class="owl-item">
-						<div class="special_item">
-							<div class="special_item_background text-center"><img src="images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
-							<div class="special_item_content text-center">
-								<div class="special_category">Visiting</div>
-								<div class="special_title"><a href="offers.html">Indonesia</a></div>
-								<div class="button last_button"><a href="offers.html">Donate</a></div>
-							</div>
+						<!-- Sidebar Quote -->
+						<div class="sidebar_quote">
+							<div class="quote_box"><img src="images/quote.png" alt=""></div>
+							<div class="quote_text"><span>“Traveling</span> – it leaves you speechless, then turns you into a storyteller.”</div>
 						</div>
 					</div>
-
-					<!-- Special Offers Item -->
-					<div class="owl-item">
-						<div class="special_item d-flex flex-column align-items-center justify-content-center">
-							<div class="special_item_background text-center"><img src="images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
-							<div class="special_item_content text-center">
-								<div class="special_category">Culture</div>
-								<div class="special_title"><a href="offers.html">India</a></div>
-								<div class="button last_button"><a href="offers.html">Donate</a></div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Special Offers Item -->
-					<div class="owl-item">
-						<div class="special_item d-flex flex-column align-items-center justify-content-center">
-							<div class="special_item_background text-center"><img src="images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
-							<div class="special_item_content text-center">
-								<div class="special_category">Sunbathing</div>
-								<div class="special_title"><a href="offers.html">Thailand</a></div>
-								<div class="button last_button"><a href="offers.html">Donate</a></div>
-							</div>
-						</div> 
-					</div>
-
-
 				</div>
 
-				<div class="special_slider_nav d-flex flex-column align-items-center justify-content-center">
-					<img src="images/special_slider.png" alt="">
-				</div>
 			</div>
 		</div>
 	</div>
@@ -480,10 +458,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/news_custom.js"></script>
 </body>
 </html>
