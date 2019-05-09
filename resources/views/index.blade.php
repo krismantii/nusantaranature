@@ -43,8 +43,8 @@
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
 								
 								@guest
-								<li class="main_nav_item" data-toggle="modal" data-target="#myRegister"><a href="#">Register</a></li>								
-								<li class="main_nav_item"><a href="#" data-toggle="modal" data-target="#myLogin">Login</a></li>
+								<li class="main_nav_item"><a href="{{ route('register') }}">Register</a></li>								
+								<li class="main_nav_item"><a href="{{ route('login') }}" >Login</a></li>
 								@endguest
 								@auth
 								<li class="main_nav_item"><a href="profil">{{ Auth::user()->name }}</a></li>
