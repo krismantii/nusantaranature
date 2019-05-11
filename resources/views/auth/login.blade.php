@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Register</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +85,7 @@
 							Register
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
-					</div>
+					</div> 
 				</form>
 			</div>
 		</div>

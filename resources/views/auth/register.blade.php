@@ -43,51 +43,51 @@
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form">
+				<form method="POST" action= "{{route('register')}}"class="login100-form validate-form">
+				@csrf
 					<span class="login100-form-title p-b-59">
 						Register
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Full Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
+						<input class="input100" type="text" value="{{ old('full name')}}" name="name" placeholder="Name...">
 						<span class="focus-input100"></span>
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="Username is required">
 						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Username...">
+						<input class="input100" type="text" value="{{ old('username')}}" name="username" placeholder="Username...">
 						<span class="focus-input100"></span>
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="Username is required">
 						<span class="label-input100">Location</span>
-						<input class="input100" type="text" name="location" placeholder="Location...">
+						<input class="input100" type="text" value="{{ old('location')}}" name="location" placeholder="Location...">
 						<span class="focus-input100"></span>
 					</div>
-
                     <div class="wrap-input100 validate-input" data-validate="Phone Number is required">
 						<span class="label-input100">Phone Number</span>
-						<input class="input100" type="text" name="number" placeholder="Number...">
+						<input class="input100" type="text" value="{{ old('phone number')}}" name="number" placeholder="Number...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
+						<input class="input100" type="text" value="{{ old('Email')}}" name="email" placeholder="Email addess...">
 						<span class="focus-input100"></span>
 					</div>
 
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
+						<input class="input100" type="text" value="{{ old('Password')}}" name="pass" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
+						<input class="input100" type="text" value="{{ old('Repear Password')}}" name="repeat-pass" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 

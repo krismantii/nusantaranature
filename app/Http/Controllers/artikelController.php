@@ -10,4 +10,9 @@ class artikelController extends Controller
     {
         return view('artikel');
     }
+
+    public function showartikel()
+    {
+        return view('IsiArtikel');
+    }
 }

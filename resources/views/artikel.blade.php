@@ -298,11 +298,11 @@
 				<div class="col">
 					<div class="home_content">
 						<div class="home_content_inner">
-							<div class="home_title">News</div>
+							<div class="home_title">Article</div>
 							<div class="home_breadcrumbs">
 								<ul class="home_breadcrumbs_list">
 									<li class="home_breadcrumb"><a href="index.html">Home</a></li>
-									<li class="home_breadcrumb">News</li>
+									<li class="home_breadcrumb">Article</li>
 								</ul>
 							</div>
 						</div>
@@ -376,58 +376,58 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="#">Top destinations in Europe</a></div>
+							<div class="post_title"><a href="/IsiArtikel">Residents Find New Habitat of Rafflesia Arnoldii in Bengkulu</a></div>
 							<div class="post_meta">
 								<ul>
-									<li><a href="#">by admin</a></li>
+									<li><a href="#">by tempo</a></li>
 									<li>january 31, 2018</li>
 									<li><a href="#">3 comments</a></li>
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="images/news_1.jpg" alt="https://unsplash.com/@simonmigaj">
-								<a href="#"><div class="post_image_box text-center">+</div></a>
+								<img src="images/rafflesia.jpg" style="width:852px;height:403px;">
+								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div class="post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+								<p>The Rafflesia Community in Kaur, Bengkulu, has discovered a new habitat of the rare flower Rafflesia arnoldii around Ulak Bandung village, Muara Sahung district, Kaur regency. </p>
 							</div>
 						</div>
 
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="#">Tips & tricks to have a perfect vacation</a></div>
+							<div class="post_title"><a href="#">As extinction looms, can Javan rhinos survive in Ujung Kulon?</a></div>
 							<div class="post_meta">
 								<ul>
-									<li><a href="#">by admin</a></li>
+									<li><a href="#">by mongabay</a></li>
 									<li>january 31, 2018</li>
 									<li><a href="#">3 comments</a></li>
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="images/news_2.jpg" alt="https://unsplash.com/@mfggomez">
-								<a href="#"><div class="post_image_box text-center">+</div></a>
+								<img src="images/rhino.jpg" style="width:852px;height:403px;">
+								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div class="post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+								<p>In the middle of the night toward the end of 1982, where the forest meets the beach, an old man, thin and barefoot, visited the Karangranjang Resort barracks in Ujung Kulon National Park. “Abah Murdja’i,” said Saridan, a forest ranger who served in the area.</p>
 							</div>
 						</div>
 
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="#">Top destinations in Europe</a></div>
+							<div class="post_title"><a href="#">Zoologists discover two new bird species in Indonesia</a></div>
 							<div class="post_meta">
 								<ul>
-									<li><a href="#">by admin</a></li>
+									<li><a href="#">by phys</a></li>
 									<li>january 31, 2018</li>
 									<li><a href="#">3 comments</a></li>
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="images/news_3.jpg" alt="https://unsplash.com/@claudiotrigueros">
-								<a href="#"><div class="post_image_box text-center">+</div></a>
+								<img src="images/zoo.jpg" style="width:852px;height:403px;">
+								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div class="post_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</p>
+								<p>Zoologists from Trinity College Dublin, working with partners from Halu Oleo University (UHO) and Operation Wallacea, have discovered two beautiful new bird species in the Wakatobi Archipelago of Sulawesi, Indonesia. Details of their discovery—of the Wakatobi white-eye and the Wangi-wangi white-eye—have been published today (April 24) in the Zoological Journal of the Linnean Society, which is the same journal in which Alfred Wallace and Charles Darwin published their game-changing original ideas about speciation in 1858.</p>
 							</div>
 						</div>
 
@@ -447,10 +447,10 @@
 							<!-- Featured Post -->
 							<div class="sidebar_featured_post">
 								<div class="sidebar_featured_image"><img src="images/sidebar_featured_1.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="#">Top destinations in Europe</a></div>
+								<div class="sidebar_featured_title"><a href="#">Top destinations in Indonesia</a></div>
 								<div class="sidebar_featured_meta">
 									<ul>
-										<li><a href="#">by admin</a></li>
+										<li><a href="#">by nana</a></li>
 										<li>january 31, 2018</li>
 										<li><a href="#">3 comments</a></li>
 									</ul>
@@ -463,7 +463,7 @@
 								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
 								<div class="sidebar_featured_meta">
 									<ul>
-										<li><a href="#">by admin</a></li>
+										<li><a href="#">by ayu</a></li>
 										<li>january 31, 2018</li>
 										<li><a href="#">3 comments</a></li>
 									</ul>
@@ -476,7 +476,7 @@
 								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
 								<div class="sidebar_featured_meta">
 									<ul>
-										<li><a href="#">by admin</a></li>
+										<li><a href="#">by nayu</a></li>
 										<li>january 31, 2018</li>
 										<li><a href="#">3 comments</a></li>
 									</ul>
@@ -535,7 +535,7 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="newsletter_content">
-						<div class="newsletter_title text-center">Subscribe to our Newsletter</div>
+						<div class="newsletter_title text-center">Subscribe to our Article</div>
 						<div class="newsletter_form_container">
 							<form action="#" id="newsletter_form" class="newsletter_form">
 								<div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
@@ -577,7 +577,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				<!-- Footer Column -->
 				<div class="col-lg-4 footer_col">
 					<div class="footer_latest">
-						<div class="footer_title">Latest News</div>
+						<div class="footer_title">Latest Article</div>
 						<div class="footer_latest_content">
 
 							<!-- Footer Latest Post -->
