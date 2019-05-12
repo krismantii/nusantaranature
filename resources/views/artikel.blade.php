@@ -42,10 +42,10 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="/">Home</a></li>
-								<li class="main_nav_item"><a href="artikel">Community</li>
+								<li class="main_nav_item"><a href="/">Home</a></li>
+								<li class="main_nav_item"><a href="komunitas">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
-								<li class="main_nav_item"><a href="artikel">Article</a></li>
+								<li class="main_nav_item active"><a href="artikel">Article</a></li>
 								
 								@guest
 								<li class="main_nav_item"><a href="{{ route('register') }}">Register</a></li>								
@@ -200,7 +200,9 @@
 	</div>
 
 	<!-- News -->
-
+	@auth
+	<button><a href ="artpost">Add Post</a></button>
+	@endauth
 	<div class="news">
 		<div class="container">
 			<div class="row">
@@ -208,14 +210,14 @@
 				<!-- News Posts -->
 				<div class="col-lg-9">
 					<div class="news_posts">
-						
+						@foreach($posts as $post)
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="/IsiArtikel">Residents Find New Habitat of Rafflesia Arnoldii in Bengkulu</a></div>
+							<div class="post_title"><a href="/IsiArtikel">{{ $post->title }}</a></div>
 							<div class="post_meta">
 								<ul>
-									<li><a href="#">by tempo</a></li>
-									<li>january 31, 2018</li>
+									<li><a href="#">By {{ $post->name }}</a></li>
+									<li>{{ $post->created_at }}</li>
 									<li><a href="#">3 comments</a></li>
 								</ul>
 							</div>
@@ -224,50 +226,12 @@
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div class="post_text">
-								<p>The Rafflesia Community in Kaur, Bengkulu, has discovered a new habitat of the rare flower Rafflesia arnoldii around Ulak Bandung village, Muara Sahung district, Kaur regency. </p>
+								<p> {{ $post->body }} </p>
 							</div>
 						</div>
-
-						<!-- News Post -->
-						<div class="news_post">
-							<div class="post_title"><a href="#">As extinction looms, can Javan rhinos survive in Ujung Kulon?</a></div>
-							<div class="post_meta">
-								<ul>
-									<li><a href="#">by mongabay</a></li>
-									<li>january 31, 2018</li>
-									<li><a href="#">3 comments</a></li>
-								</ul>
-							</div>
-							<div class="post_image">
-								<img src="images/rhino.jpg" style="width:852px;height:403px;">
-								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
-							</div>
-							<div class="post_text">
-								<p>In the middle of the night toward the end of 1982, where the forest meets the beach, an old man, thin and barefoot, visited the Karangranjang Resort barracks in Ujung Kulon National Park. “Abah Murdja’i,” said Saridan, a forest ranger who served in the area.</p>
-							</div>
-						</div>
-
-						<!-- News Post -->
-						<div class="news_post">
-							<div class="post_title"><a href="#">Zoologists discover two new bird species in Indonesia</a></div>
-							<div class="post_meta">
-								<ul>
-									<li><a href="#">by phys</a></li>
-									<li>january 31, 2018</li>
-									<li><a href="#">3 comments</a></li>
-								</ul>
-							</div>
-							<div class="post_image">
-								<img src="images/zoo.jpg" style="width:852px;height:403px;">
-								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
-							</div>
-							<div class="post_text">
-								<p>Zoologists from Trinity College Dublin, working with partners from Halu Oleo University (UHO) and Operation Wallacea, have discovered two beautiful new bird species in the Wakatobi Archipelago of Sulawesi, Indonesia. Details of their discovery—of the Wakatobi white-eye and the Wangi-wangi white-eye—have been published today (April 24) in the Zoological Journal of the Linnean Society, which is the same journal in which Alfred Wallace and Charles Darwin published their game-changing original ideas about speciation in 1858.</p>
-							</div>
-						</div>
-
+						@endforeach
 					</div>
-				</div>
+				</div>							
 
 				<!-- Sidebar -->
 				<div class="col-lg-3">

@@ -52,7 +52,7 @@
 								<button class="dropbtn">{{ Auth::user()->name }}</button>
 								
 								<div class="dropdown-content">
-  								<a href="#">profil</a>
+  								<a href="profil">Profile</a>
   								<a href="#">My Community</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
   								</div>
