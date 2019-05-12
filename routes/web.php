@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/register', 'Auth\RegisterController@index')->name('register');
+
 Route::get('/aboutUs', 'aboutUsController@index')->name('abaoutUs');
 Route::get('/campaign', 'campaignController@index')->name('campaign');
 Route::get('/profil', 'profilController@index')->name('profil');
