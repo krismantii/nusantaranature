@@ -11,6 +11,14 @@
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/news_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
 
@@ -35,20 +43,24 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="/">Home</a></li>
+								<li class="main_nav_item active"><a href="/">Home</a></li>
+								<li class="main_nav_item"><a href="artikel">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
-								
 								@guest
-								<li class="main_nav_item" data-toggle="modal" data-target="#myRegister"><a href="#">Register</a></li>								
-								<li class="main_nav_item"><a href="#" data-toggle="modal" data-target="#myLogin">Login</a></li>
+								<li class="main_nav_item"><a href="{{ route('register') }}">Register</a></li>								
+								<li class="main_nav_item"><a href="{{ route('login') }}" >Login</a></li>
 								@endguest
 								@auth
-								<li class="main_nav_item"><a href="profil">{{ Auth::user()->name }}</a></li>
-								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-								{{ __('Logout') }}
-								</a>	
-																
+								<div class="dropdown">
+								<button class="dropbtn">{{ Auth::user()->name }}</button>
+								
+								<div class="dropdown-content">
+  								<a href="#">profil</a>
+  								<a href="#">My Community</a>
+  								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+  								</div>
+								</div>								
             					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               					@csrf
             					</form>

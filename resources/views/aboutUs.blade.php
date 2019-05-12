@@ -34,21 +34,25 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-                            <li class="main_nav_item"><a href="/">Home</a></li>
+							<li class="main_nav_item active"><a href="/">Home</a></li>
+								<li class="main_nav_item"><a href="artikel">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
-								<li class="main_nav_item active"><a href="aboutUs">About Us</a></li>
 								
 								@guest
-								<li class="main_nav_item"><a href="register">Register</a></li>
-								<li class="main_nav_item"><a href="login">Login</a></li>
+								<li class="main_nav_item"><a href="{{ route('register') }}">Register</a></li>								
+								<li class="main_nav_item"><a href="{{ route('login') }}" >Login</a></li>
 								@endguest
 								@auth
-								<li class="main_nav_item"><a href="#">{{ Auth::user()->name }}</a></li>
-								<!-- <li class="main_nav_item"><a href="{{ route('logout') }}">{{ __('Logout') }}</a></li> -->
-								<a class="main_nav_item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              					{{ __('Logout') }}
-            					</a>
+								<div class="dropdown">
+								<button class="dropbtn">{{ Auth::user()->name }}</button>
+								
+								<div class="dropdown-content">
+  								<a href="#">profil</a>
+  								<a href="#">My Community</a>
+  								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+  								</div>
+								</div>								
             					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               					@csrf
             					</form>
@@ -56,13 +60,7 @@
 							</ul>
 						</nav>
 
-						<!-- Search -->
-						<div class="search">
-							<form action="#" class="search_form">
-								<input type="search" name="search_input" class="search_input ctrl_class" required="required" placeholder="Keyword">
-								<button type="submit" class="search_button ml-auto ctrl_class"><img src="images/search.png" alt=""></button>
-							</form>
-						</div>
+						
 
 						<!-- Hamburger -->
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
