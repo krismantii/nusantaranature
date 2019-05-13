@@ -377,7 +377,7 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="#">Residents Find New Habitat of Rafflesia Arnoldii in Bengkulu</a></div>
+							<div class="post_title"><a>Residents Find New Habitat of Rafflesia Arnoldii in Bengkulu</a></div>
 							<div class="post_meta">
 								<ul>
 									<li><a href="#">by tempo</a></li>
@@ -390,7 +390,18 @@
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div class="post_text">
-								<p>The Rafflesia Community in Kaur, Bengkulu, has discovered a new habitat of the rare flower Rafflesia arnoldii around Ulak Bandung village, Muara Sahung district, Kaur regency. </p>
+								<p>The Rafflesia Community in Kaur, Bengkulu, has discovered a new habitat of the rare flower Rafflesia arnoldii around Ulak Bandung village, Muara Sahung district, Kaur regency. 
+
+“We have mapped this location as a new habitat for Rafflesia arnoldii,” said the coordinator of the Padang Guci Rare Flower Care Community (KPPLG), Andri Yan, in Bengkulu on Wednesday, October 24. 
+
+Ulak Bandung village's acting head Zul Almahera has volunteered to become a guide for visitors wanting to see the rare flower. 
+
+“Since there is a corpse flower habitat, the number of visits to the location has been quite high," Yan said, adding that there were Australian tourists on Tuesday and Wednesday.</p>
+								<p>The coordinator of the Rare Flower Care Community (KPPL), Sofian Ramadhan, said the new habitat had increased the number of Rafflesia flowers' growing spots in the province.
+
+Currently, there are eight Rafflesia growing spots in Bengkulu, namely Kaur, South Bengkulu, Seluma, Kepahiang, Central Bengkulu, North Bengkulu, and Lebong and Mukomuko. 
+
+Virtually all regions in Bengkulu—except Bengkulu city—are home to natural habitats of the Rafflesia arnoldii. “That is why it is very important to preserve the forests of Bengkulu,” said Sofian. </p>
 							</div>
 						</div>
 
@@ -398,17 +409,17 @@
 
 						
 
-				<!-- Sidebar -->
-				<div class="col-lg-3">
-						<div class="sidebar">
-							<div class="sidebar_search">
-								<input type="search" class="sidebar_search_input" placeholder="Search">
-							</div> -->
+				<!-- Sidebar 
+				 <div class="col-lg-3">
+					<div class="sidenav">
+						<div class="sidebar"> 
 
-						<!-- Featured Posts -->
-						<div class="sidebar_featured">
+							
 
-							<!-- Featured Post -->
+						 Featured Posts 
+						<div class="sidebar_featured"> 
+
+							 Featured Post
 							<div class="sidebar_featured_post">
 								<div class="sidebar_featured_image"><img src="images/sidebar_featured_1.jpg" alt=""></div>
 								<div class="sidebar_featured_title"><a href="#">Top destinations in Indonesia</a></div>
@@ -421,7 +432,7 @@
 								</div>
 							</div>
 
-							<!-- Featured Post -->
+							 Featured Post 
 							<div class="sidebar_featured_post">
 								<div class="sidebar_featured_image"><img src="images/sidebar_featured_2.jpg" alt=""></div>
 								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
@@ -434,7 +445,7 @@
 								</div>
 							</div>
 
-							<!-- Featured Post -->
+							 Featured Post
 							<div class="sidebar_featured_post">
 								<div class="sidebar_featured_image"><img src="images/sidebar_featured_3.jpg" alt=""></div>
 								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
@@ -447,12 +458,12 @@
 								</div>
 							</div>
 
-						</div>
+						</div> -->
 
 						<!-- Offers -->
-						<div class="sidebar_offers">
+						 <div class="sidebar_offers"> 
 
-							<!-- Offer -->
+							 Offer
 							<div class="sidebar_offer">
 								<div class="sidebar_offer_background" style="background-image:url(images/offer_1.jpg)"></div>
 								<div class="sidebar_offer_content">
@@ -464,7 +475,7 @@
 								</div>
 							</div>
 
-							<!-- Offer -->
+							Offer 
 							<div class="sidebar_offer">
 								<div class="sidebar_offer_background" style="background-image:url(images/offer_2.jpg)"></div>
 								<div class="sidebar_offer_content">
@@ -478,17 +489,19 @@
 
 						</div>
 
-						<!-- Sidebar Quote -->
+						 Sidebar Quote 
 						<div class="sidebar_quote">
 							<div class="quote_box"><img src="images/quote.png" alt=""></div>
 							<div class="quote_text"><span>“Traveling</span> – it leaves you speechless, then turns you into a storyteller.”</div>
 						</div>
+					</div>
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
+
 
 	<!-- Newsletter -->
 
