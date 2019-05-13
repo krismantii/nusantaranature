@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
 <title>Article</title>
+<style>
+.button {
+  background: #fe435b;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
@@ -20,6 +35,7 @@
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
+
 
 <div class="super_container">
 	
@@ -101,7 +117,7 @@
 					<li class="menu_item menu_mm"><a href="artikel">Articles</a></li>
 					<li class="menu_item menu_mm"><a href="campaign">Campaigns</a></li>
 					<li class="menu_item menu_mm"><a href="aboutUs">About Us</a></li>
-					<li class="menu_item menu_mm"><a href="contact">Contact</a></li>
+					<li class="menu_item menu_mm"><a href="contact">Contact</a></li>	
 				</ul>
 
 				<!-- Menu Social -->
@@ -133,12 +149,17 @@
 				<div class="col">
 					<div class="home_content">
 						<div class="home_content_inner">
-							<div class="home_title">Article</div>
+							<div class="home_title">Article
+							<a style="position: absolute; right: 5px; background:#fe435b"href="artpost" class="button">Add Post</a>
+							</div>
 							<div class="home_breadcrumbs">
+
 								<ul class="home_breadcrumbs_list">
 									<li class="home_breadcrumb"><a href="index.html">Home</a></li>
 									<li class="home_breadcrumb">Article</li>
+								
 								</ul>
+								
 							</div>
 						</div>
 					</div>
@@ -149,13 +170,13 @@
 
 	<!-- Find Form -->
 
-	<div class="find">
-		<!-- Image by https://unsplash.com/@garciasaldana_ -->
+	<!-- <div class="find">
+		 Image by https://unsplash.com/@garciasaldana_ 
 		<div class="find_background_container prlx_parent">
 			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
-		</div>
+		</div> -->
 		<!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
-		<div class="container">
+		<!-- <div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="find_title text-center">Find the Adventure of a lifetime</div>
@@ -198,7 +219,7 @@
 			</div>
 		</div>
 	</div>
-
+	-->
 	<!-- News -->
 	@auth
 	<button><a href ="artpost">Add Post</a></button>

@@ -40,7 +40,7 @@
 	
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="login100-more" style="background-image: url('images/gunung.jpg');"></div>
+			<div class="login100-more" style="background-image: url('images/login.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form method="POST" action= "{{route('register')}}"class="login100-form validate-form">
