@@ -42,9 +42,9 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-                            <li class="main_nav_item active"><a href="/">Home</a></li>
+                            <li class="main_nav_item"><a href="/">Home</a></li>
 								<li class="main_nav_item"><a href="artikel">Community</li>
-								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
+								<li class="main_nav_item active"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
 								
 								@guest
@@ -67,176 +67,6 @@
 								@endauth
 							</ul>
 						</nav>
-
-
-						<!-- Modal Login -->
-						<div id="myLogin" class="modal fade" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-  					<div class="modal-dialog" role="document">
-
-							<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4 class="modal-title" id="loginModalLabel">Login</h4>
-								<button type="button" name="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span></button>
-							</div>
-							<div class="modal-body">
-								<form method="POST" action="{{ route('login') }}">
-								@csrf
-
-								<div class="form-group row">
-									<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-									<div class="col-md-6">
-										<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-										@if ($errors->has('email'))
-											<span class="invalid-feedback" role="alert">
-												<strong>{{ $errors->first('email') }}</strong>
-											</span>
-										@endif
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-									<div class="col-md-6">
-										<input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-										@if ($errors->has('password'))
-											<span class="invalid-feedback" role="alert">
-												<strong>{{ $errors->first('password') }}</strong>
-											</span>
-										@endif
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<div class="col-md-6 offset-md-4">
-										<div class="form-check">
-											<input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-											<label class="form-check-label" for="remember">
-												{{ __('Remember Me') }}
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group row mb-0">
-									<div class="col-md-8 offset-md-4">
-										<button type="submit" class="btn btn-primary">
-											{{ __('Login') }}
-										</button>
-
-										@if (Route::has('password.request'))
-											<a class="btn btn-link" href="{{ route('password.request') }}">
-												{{ __('Forgot Your Password?') }}
-											</a>
-										@endif
-									</div>
-								</div>
-								</form>
-							</div>
-	
-						</div>
-					</div>
-				</div>
-						<!-- End Modal Login -->
-
-		<!-- Modal Register -->
-		<div id="myRegister" class="modal fade" data-backdrop="false" role="dialog">
-					<div class="modal-dialog">
-
-						<!-- Modal content-->
-						<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title">Register</h4>
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-						</div>
-						<div class="modal-body">
-						<form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="domisili" class="col-md-4 col-form-label text-md-right">{{ __('Domisili') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="domisili" class="form-control{{ $errors->has('domisili') ? ' is-invalid' : '' }}" name="domisili" value="{{ old('domisili') }}" required>
-
-                                @if ($errors->has('domisili'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('domisili') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-						</div>
-						
-						</div>
-					</div>
-					</div>
-					<!-- end modal daftar -->
 					
 						<!-- Search -->
 						<div class="search">
@@ -446,16 +276,19 @@
 					</div>
 				</div>
 			</div>
+			@auth
+				<button><a href="camp">Add Campaign</a></button>
+			@endauth
 			<div class="row">
 				<div class="col">
 					<div class="items item_grid clearfix">
-
+					@foreach($camps as $camp)
 						<!-- Item -->
 						<div class="item clearfix rating_5">
 							<div class="item_image"><img src="images/top_1.jpg" alt=""></div>
 							<div class="item_content">
-								<div class="item_price">From $890</div>
-								<div class="item_title">Paris, France</div>
+								<div class="item_price">{{ $camp->daerah }}</div>
+								<div class="item_title">{{ $camp->nama_camp }}</div>
 								<ul>
 									<li>1 person</li>
 									<li>4 nights</li>
@@ -468,80 +301,12 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
 								</div>
-								<div class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</div>
+								<div class="item_text">{{ $camp->desc_camp }}</div>
 								<div class="item_more_link"><a href="#">Read More</a></div>
 							</div>
 						</div>
-
-						<!-- Item -->
-						<div class="item clearfix rating_3">
-							<div class="item_image"><img src="images/top_2.jpg" alt=""></div>
-							<div class="item_content">
-								<div class="item_price">From $290</div>
-								<div class="item_title">Cinque Terre</div>
-								<ul>
-									<li>1 person</li>
-									<li>4 nights</li>
-									<li>3 star hotel</li>
-								</ul>
-								<div class="rating rating_3" data-rating="3">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-								<div class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</div>
-								<div class="item_more_link"><a href="#">Read More</a></div>
-							</div>
-						</div>
-
-						<!-- Item -->
-						<div class="item clearfix rating_4">
-							<div class="item_image"><img src="images/top_3.jpg" alt=""></div>
-							<div class="item_content">
-								<div class="item_price">From $590</div>
-								<div class="item_title">Italian Riviera</div>
-								<ul>
-									<li>1 person</li>
-									<li>4 nights</li>
-									<li>3 star hotel</li>
-								</ul>
-								<div class="rating rating_4" data-rating="4">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-								<div class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</div>
-								<div class="item_more_link"><a href="#">Read More</a></div>
-							</div>
-						</div>
-
-						<!-- Item -->
-						<div class="item clearfix rating_5">
-							<div class="item_image"><img src="images/top_4.jpg" alt=""></div>
-							<div class="item_content">
-								<div class="item_price">From $490</div>
-								<div class="item_title">Santorini, Greece</div>
-								<ul>
-									<li>1 person</li>
-									<li>4 nights</li>
-									<li>3 star hotel</li>
-								</ul>
-								<div class="rating rating_5" data-rating="5">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
-								<div class="item_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus.</div>
-								<div class="item_more_link"><a href="#">Read More</a></div>
-							</div>
-						</div>
-
+					@endforeach
+					
 					</div>
 				</div>
 			</div>
