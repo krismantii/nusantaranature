@@ -24,7 +24,7 @@ class campController extends Controller
         $loggedInUserId = Auth::id();
         $camps = Donate::all()->where('camp_id', $loggedInUserId);
 
-        return view('campaign',['camps'=>$camps]);
+        return view('camp',['camps'=>$camps]);
     }
 
     /**
@@ -49,7 +49,7 @@ class campController extends Controller
 
         $camp->save();
 
-        return redirect()->route('camp.index');
+        return redirect('campaign');
 
         }
     
