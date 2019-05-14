@@ -44,24 +44,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-=======
-        $post = new Post;
 
-        $postTitle = $request->title;
-        $postDescription = $request->description;
-        $postUserId = Auth::id();
-        $postName = Auth::user()->name;
-
-        $post->user_id = $postUserId;
-        $post->title = $postTitle;
-        $post->body = $postDescription;
-        $post->name = $postName;
-
-        $post->save();
->>>>>>> 8cf6fadd6df6f57ba7981a13ba09de330f3d1bc4
-
-        $this->middleware('auth');
         $this->validate(request(),
         [
             'title' => 'required',
