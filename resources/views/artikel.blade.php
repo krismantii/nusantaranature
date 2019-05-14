@@ -56,8 +56,10 @@
 								<button class="dropbtn">{{ Auth::user()->name }}</button>
 								
 								<div class="dropdown-content">
-  								<a href="#">profil</a>
-  								<a href="#">My Community</a>
+								<a href="profil">Profile</a>
+  								<a href="#">Add community</a>
+								<a href="camp">Add campaign</a>
+								<a href="artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
   								</div>
 								</div>								
@@ -98,6 +100,7 @@
 				</div>
 				<ul class="menu_list menu_mm">
 					<li class="menu_item menu_mm"><a href="/">Home</a></li>
+					<li class="menu_item menu_mm"><a href="komunitas">Community</a></li>
 					<li class="menu_item menu_mm"><a href="artikel">Articles</a></li>
 					<li class="menu_item menu_mm"><a href="campaign">Campaigns</a></li>
 					<li class="menu_item menu_mm"><a href="aboutUs">About Us</a></li>
@@ -200,9 +203,7 @@
 	</div>
 
 	<!-- News -->
-	@auth
-	<button><a href ="artpost">Add Post</a></button>
-	@endauth
+
 	<div class="news">
 		<div class="container">
 			<div class="row">

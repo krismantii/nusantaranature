@@ -43,7 +43,7 @@
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
                             <li class="main_nav_item"><a href="/">Home</a></li>
-								<li class="main_nav_item"><a href="artikel">Community</li>
+								<li class="main_nav_item"><a href="komunitas">Community</li>
 								<li class="main_nav_item active"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
 								
@@ -56,8 +56,10 @@
 								<button class="dropbtn">{{ Auth::user()->name }}</button>
 								
 								<div class="dropdown-content">
-  								<a href="#">profil</a>
-  								<a href="#">My Community</a>
+								<a href="profil">Profile</a>
+  								<a href="#">Add community</a>
+								<a href="camp">Add campaign</a>
+								<a href="artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
   								</div>
 								</div>								
@@ -276,9 +278,7 @@
 					</div>
 				</div>
 			</div>
-			@auth
-				<button><a href="camp">Add Campaign</a></button>
-			@endauth
+			
 			<div class="row">
 				<div class="col">
 					<div class="items item_grid clearfix">

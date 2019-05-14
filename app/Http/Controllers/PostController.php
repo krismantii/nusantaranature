@@ -51,7 +51,6 @@ class PostController extends Controller
         $postUserId = Auth::id();
         $postName = Auth::user()->name;
 
-
         $post->user_id = $postUserId;
         $post->title = $postTitle;
         $post->body = $postDescription;
