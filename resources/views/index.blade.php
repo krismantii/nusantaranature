@@ -39,7 +39,7 @@
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
 								<li class="main_nav_item active"><a href="/">Home</a></li>
-								<li class="main_nav_item"><a href="artikel">Community</li>
+								<li class="main_nav_item"><a href="komunitas">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
 								
@@ -54,8 +54,8 @@
 								<div class="dropdown-content">
   								<a href="profil">Profile</a>
   								<a href="#">Add community</a>
-								<a href="#">Add campaign</a>
-								<a href="#">Add article</a>
+								<a href="camp">Add campaign</a>
+								<a href="artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
   								</div>
 								</div>								
