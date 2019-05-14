@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -44,21 +44,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->middleware('auth');
+        $this->validate(request(),
+        [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
         $post = new Post;
-
-        $postTitle = $request->title;
-        $postDescription = $request->description;
-        $postUserId = Auth::id();
-        $postName = Auth::user()->name;
-
-
-        $post->user_id = $postUserId;
-        $post->title = $postTitle;
-        $post->body = $postDescription;
-        $post->name = $postName;
-
-        $post->save();
-
+        $post->user_id= Auth::user()->id;
+        $post->title = $request->input('title');
+        $post->body = $request->input('description');
+        $post->name = $request->input('name');
+		$post->save();
         return redirect()->route('posts.index');
 
         }

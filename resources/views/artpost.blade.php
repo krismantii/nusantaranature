@@ -20,9 +20,11 @@
 	background-size: cover; /* Resize the background image to cover the entire container */
 	}
 		.kotak {
-  		border-radius: 5px;
+		border-radius: 5px;
   		background-color: #131a2f;
 		padding: 20px;
+		padding-bottom: 50px;
+
 		
 
 		
@@ -42,34 +44,35 @@
 	        
     		<h1 style="position: center">Create post</h1>
 			<div class="Kotak">		
-    		<form action="{{ route('posts.store') }}" method="POST">
+    		<form action="{{ route('postsstore') }}" method="POST">
     		    {{ csrf_field() }}
     		    <div class="form-group">
-    		        <label style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #fffffff;" for="title"> Title <span class="require">*</span></label>
+    		        <label style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;" for="title"> Title <span class="require">*</span></label>
     		        <input type="text" class="form-control" name="title" />
     		    </div>
     		    
     		    <div class="form-group">
-    		        <label for="description">Description</label>
+    		        <label style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;" for="description">Description</label>
     		        <textarea rows="5" class="form-control" name="description" ></textarea>
     		    </div>
     		    
     		    <div class="form-group">
-    		        <p><span class="require">*</span> - required fields</p>
+    		        <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;"><span >*</span> - required fields</p>
+    		        
     		    </div>
     		    
     		    <div class="form-group">
-    		        <button type="submit" class="btn btn-primary">
+    		        <button type="submit" class="btn btn-primary" style="position: absolute; right:40px; background:#fe435b">
     		            Post
     		        </button>
-    		        <button class="btn btn-default"><a href="artikel">
+    		        <button class="btn btn-default" style="position: absolute; right:110px; background:#dddddd" ><a href="artikel" >
     		            Discard
                     </a>
-
     		        </button>
     		    </div>
-    		    
+
     		</form>
+			</div>
 		</div>
 		
 	</div>

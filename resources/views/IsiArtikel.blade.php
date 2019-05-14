@@ -43,10 +43,10 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="/">Home</a></li>
+								<li class="main_nav_item"><a href="/">Home</a></li>
 								<li class="main_nav_item"><a href="artikel">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
-								<li class="main_nav_item"><a href="artikel">Article</a></li>
+								<li class="main_nav_item active"><a href="artikel">Article</a></li>
 								@guest
 								<li class="main_nav_item"><a href="{{ route('register') }}">Register</a></li>								
 								<li class="main_nav_item"><a href="{{ route('login') }}" >Login</a></li>
@@ -401,7 +401,7 @@
 								<img src="images/rafflesia.jpg" style="width:852px;height:403px;">
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
-							<div class="post_text">
+							<div class="post_text" style="  margin-right: 5px; ">
 								<p>The Rafflesia Community in Kaur, Bengkulu, has discovered a new habitat of the rare flower Rafflesia arnoldii around Ulak Bandung village, Muara Sahung district, Kaur regency. 
 
 “We have mapped this location as a new habitat for Rafflesia arnoldii,” said the coordinator of the Padang Guci Rare Flower Care Community (KPPLG), Andri Yan, in Bengkulu on Wednesday, October 24. 

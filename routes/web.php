@@ -28,6 +28,7 @@ Route::get('/artikel', 'PostController@publicArtikel');
 Route::get('/detailcamp', 'detailcampController@index')->name('detailcamp');
 Route::get('/IsiArtikel', 'artikelController@showartikel')->name('IsiArtikel');
 Route::resource('posts', 'PostController');
-Route::get('/artpost', 'artpostController@index')->name('artpost');
+Route::get('/artpost', 'artpostController@index')->name('artpost')->middleware('auth');;
 Route::get('/camp', 'campController@index')->name('camp');
 Route::resource('camp', 'campController');
+Route::post('/post/store', 'postController@store')->name('postsstore')->middleware('auth');;
