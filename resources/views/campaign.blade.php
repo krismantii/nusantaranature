@@ -57,7 +57,7 @@
 								
 								<div class="dropdown-content">
 								<a href="profil">Profile</a>
-  								<a href="#">Add community</a>
+  								<a href="komunitas">Add community</a>
 								<a href="camp">Add campaign</a>
 								<a href="artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>

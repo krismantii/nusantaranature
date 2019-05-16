@@ -32,3 +32,8 @@ Route::get('/artpost', 'artpostController@index')->name('artpost')->middleware('
 Route::get('/camp', 'campController@index')->name('camp');
 Route::resource('camp', 'campController');
 Route::post('/post/store', 'postController@store')->name('postsstore')->middleware('auth');;
+
+
+Route::get('/komunitas', 'komunitasController@index')->name('komunitas');
+Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
+Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku');
