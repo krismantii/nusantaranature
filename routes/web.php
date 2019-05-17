@@ -39,6 +39,6 @@ Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunit
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku');
 
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
-Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('tampilankom');
-Route::post('/tampilankom/update/', 'tampilanupController@update')->name('update');
-Route::get('/tampilankom/update/{id}', 'tampilanupController@index')->name('updateview');
+Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
+Route::post('/tampilankom/update/', 'tampilanupController@update')->name('updatekom');
+Route::get('/tampilankom/update/{id}', 'tampilanupController@index')->name('tampilanup');

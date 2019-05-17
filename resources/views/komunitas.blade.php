@@ -191,7 +191,7 @@
                     <h5 class="card-title">{{$item->nama}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{$item->daerah}}</h6>
                     <p class="card-text">{{$item->deskripsi}}</p>
-                    <a href="tampilankom/{{$item->id}}" class="btn btn-primary">Lihat</a>
+                    <a href="tampilankom/{{$item->id}}" class="btn btn-primary">Read more</a>
                 </div>
             </div>
         </div>
