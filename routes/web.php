@@ -37,3 +37,8 @@ Route::post('/post/store', 'postController@store')->name('postsstore')->middlewa
 Route::get('/komunitas', 'komunitasController@index')->name('komunitas');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku');
+
+Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
+Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('tampilankom');
+Route::post('/tampilankom/update/', 'tampilanupController@update')->name('update');
+Route::get('/tampilankom/update/{id}', 'tampilanupController@index')->name('updateview');

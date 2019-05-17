@@ -10,7 +10,8 @@ class komunitasController extends Controller
 {
     public function index()
     {
-        return view('komunitas');
+        $komunitas = Komunitas::All();
+        return view('komunitas', ['komunitas'=>$komunitas]);
     }
 
     public function tampilanadd()
