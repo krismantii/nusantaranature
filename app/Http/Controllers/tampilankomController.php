@@ -18,7 +18,7 @@ class tampilankomController extends Controller
     {
         $komunitas = Komunitas::find($id);
         $komunitas -> delete();
-        return redirect('komunitas')->with('info','komunitas Deleted Successfully!');
+        return redirect('/komunitas')->with('info','komunitas Deleted Successfully!');
     }
 
     public function update(Request $request,$id)

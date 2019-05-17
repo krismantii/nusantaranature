@@ -182,7 +182,8 @@
         <br>
 
         <div class="container-fluid mt-4">
-    <div class="row justify-content-center">
+
+    <div class="row justify-content-center" id="demo">
     @foreach($komunitas as $item)
         <div class="col-auto mb-3">
             <div class="card" style="width: 18rem;">

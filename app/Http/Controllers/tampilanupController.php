@@ -28,7 +28,7 @@ class tampilanupController extends Controller
         $komunitas->foto= $name;
     }
     $komunitas->save();
-    return redirect('home')->with('info','komunitas update Successfully!');
+    return redirect('tampilankom/'.$komunitas->id)->with('info','komunitas update Successfully!');
     }
 
     public function index($id)
