@@ -304,20 +304,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
-					<div class="pages">
-						<ul class="pages_list">
-							<li class="page active"><a href="#">01.</a></li>
-							<li class="page"><a href="#">02.</a></li>
-							<li class="page"><a href="#">03.</a></li>
-							<li class="page"><a href="#">04.</a></li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
-	</div>
+	
 
 	<!-- Newsletter -->
 

@@ -26,17 +26,17 @@ Route::get('/profil', 'profilController@index')->name('profil');
 // Route::get('/artikel', 'artikelController@index')->name('artikel');
 Route::get('/artikel', 'PostController@publicArtikel');
 Route::get('/detailcamp', 'detailcampController@index')->name('detailcamp');
-Route::get('/IsiArtikel', 'artikelController@showartikel')->name('IsiArtikel');
-Route::resource('posts', 'PostController');
+Route::get('/IsiArtikel/{id}', 'artikelController@showartikel')->name('IsiArtikel');
+// Route::resource('halo', 'PostController');
 Route::get('/artpost', 'artpostController@index')->name('artpost')->middleware('auth');;
 Route::get('/camp', 'campController@index')->name('camp');
 Route::resource('camp', 'campController');
 Route::post('/post/store', 'postController@store')->name('postsstore')->middleware('auth');;
 
-
-Route::get('/komunitas', 'komunitasController@index')->name('komunitas');
+Route::get('/komunitas', 'komunitasController@index');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
-Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku');
+Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku')->middleware('auth');;
+Route::resource('kom', 'komunitasController');
 
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');

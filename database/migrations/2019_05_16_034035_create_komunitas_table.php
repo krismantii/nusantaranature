@@ -15,6 +15,7 @@ class CreateKomunitasTable extends Migration
     {
         Schema::create('komunitas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('komunitas_id');
             $table->string('nama');
             $table->string('foto');
             $table->string('daerah');
