@@ -24,10 +24,6 @@
   		background-color: #131a2f;
 		padding: 20px;
 		padding-bottom: 50px;
-
-		
-
-		
 		
 }
 </style>
