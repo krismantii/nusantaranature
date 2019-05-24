@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="<?php echo asset('css/profil.css')?>" type="text/css">
-<!------ Include the above in your HEAD tag ---------->
-</head>
-<body>
-<div class="container emp-profile">
-		<button><a href="/">Home</a></button>
-			<div class="row">
-				<div class="col-md-4">
-        	<div class="profile-img">
-          	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-            <div class="file btn btn-lg btn-primary">
-            	Change Photo
-              <input type="file" name="file"/>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-        	<div class="profile-head">
-          <h5>{{ Auth::user()->name }}</h5>
-					<h6>Web Developer and Designer</h6>
-					<p class="proile-rating">{{ Auth::user()->email }}</span></p>
-				</div>
-      </div>
-			<div class="col-md-2">
-      	<input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-      </div>
-</div>
-					<div class="col-lg-7">
+<div class="col-lg-7">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
 								  <li class="nav-item">
@@ -99,5 +66,3 @@
 
               </div>
           </div>
-</body>
-</html>

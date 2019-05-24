@@ -33,7 +33,7 @@ Route::get('/camp', 'campController@index')->name('camp');
 Route::resource('camp', 'campController');
 Route::post('/post/store', 'postController@store')->name('postsstore')->middleware('auth');;
 
-Route::get('/komunitas', 'komunitasController@index');
+Route::get('/komunitas', 'komunitasController@publicKomunitas');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku')->middleware('auth');;
 Route::resource('kom', 'komunitasController');
@@ -42,3 +42,5 @@ Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilanko
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
 Route::post('/tampilankom/update', 'tampilanupController@update')->name('updatekom');
 Route::get('/tampilankom/update/{id}', 'tampilanupController@index')->name('tampilanup');
+// Route::get('/IsiArtikel/{id}', 'PostsController@show')->name('posts.show');
+Route::resource('comments', 'CommentsController');
