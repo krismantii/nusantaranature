@@ -5,18 +5,15 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB; 
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 use Auth;
 
 class PostController extends Controller
 {
-    public function showUploadForm(){
-        return view('upload');
-    }
-
-    public function storeFile(request $request){
-        return $request->all();
-    }
     
+
     public function publicArtikel() {
         $posts = Post::all();
 
@@ -25,7 +22,7 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responses
      */
     public function index()
     {
@@ -54,24 +51,35 @@ class PostController extends Controller
     public function store(Request $request)
     { 
 
-        $this->validate(request(),
+        $this->validate($request,
         [
             'title' => 'required',
-            'description' => 'required'
+            'desc' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg'
         ]);
         $post = new Post;
         $post->user_id= Auth::id();
         $post->title = $request->input('title');
-        $post->body = $request->input('description');
+        $post->desc = $request->input('desc');
         $post->name = Auth::user()->name;
+        $exist = Storage::disk('local')->exists('Post',$request->input('image'));
+        if($exist){
+            Storage::disk('local')->delete('Post',$request->input('image'));
+            // return "haha";
+        }
+        if($request->hasFile('image')){
+            $name = Storage::disk('local')->put('Post', $request->image);
+            $post->image = $name;
+            // return "he";
+        }
+        // return "hi";
 		$post->save();
         return redirect()->route('artikel');
-
         }
 
 
 
-    /**
+    /*
      * Display the specified resource.
      *
      * @param  \App\Post  $post

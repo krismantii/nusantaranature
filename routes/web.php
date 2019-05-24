@@ -38,13 +38,9 @@ Route::get('/komunitas', 'komunitasController@index');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku')->middleware('auth');;
 Route::resource('kom', 'komunitasController');
-<<<<<<< HEAD
 
-Route::get('file','PostController@showUploadForm')->name('upload.file'); 
-Route::get('file','PostController@storeFile');
 
-=======
->>>>>>> 9884c83e7fcc06d90ca1a9333d848e7f64f9571b
+
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
 Route::post('/tampilankom/update', 'tampilanupController@update')->name('updatekom');
