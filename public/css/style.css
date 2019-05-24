@@ -586,6 +586,20 @@ ol {
 	background-position: center bottom 13px;
 }
 
+.button {
+	background: #fe435b;
+	border-radius: 40px;
+	border: none;
+	color: white;
+	padding: 3px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 4px;
+	cursor: pointer;
+  }
+
 /* ----------------
   About page
 ---------------------*/

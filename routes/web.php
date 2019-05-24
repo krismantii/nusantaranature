@@ -37,7 +37,6 @@ Route::get('/komunitas', 'komunitasController@index');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku')->middleware('auth');;
 Route::resource('kom', 'komunitasController');
-
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
 Route::post('/tampilankom/update', 'tampilanupController@update')->name('updatekom');

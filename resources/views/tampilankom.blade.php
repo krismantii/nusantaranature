@@ -101,7 +101,7 @@
 								<li><span>Deskripsi:</span></li>
 							</ul>
 							<p>{{$item->deskripsi}}</p>
-							<button type="button" role="presentation" class="btn btn-dark">Join</button>
+							<button type="button" role="presentation" class="btn btn-dark">Join for more information</button>
 						</div>
 					</div>
 				</div>
