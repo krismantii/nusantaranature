@@ -44,7 +44,7 @@
 	        
     		<h1 style="position: center">Create post</h1>
 			<div class="Kotak">		
-    		<form action="{{ route('postsstore') }}" method="POST">
+    		<form action="{{ route('postsstore') }}" method="POST" enctype="multipart/form-data">
     		    {{ csrf_field() }}
     		    <div class="form-group">
     		        <label style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;" for="title"> Title <span class="require">*</span></label>
@@ -61,9 +61,7 @@
     		        
     		    </div>
 
-				<form action="upload.php" method="PHP" enctype="multipart/form-data">
 					<input type="file" name="file">
-				</form>
     		    
     		    <div class="form-group">
     		        <button type="submit" class="btn btn-primary" style="position: absolute; right:40px; background:#fe435b" name="submit">

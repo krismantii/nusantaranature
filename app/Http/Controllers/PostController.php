@@ -9,6 +9,14 @@ use Auth;
 
 class PostController extends Controller
 {
+    public function showUploadForm(){
+        return view('upload');
+    }
+
+    public function storeFile(request $request){
+        return $request->all();
+    }
+    
     public function publicArtikel() {
         $posts = Post::all();
 
@@ -44,7 +52,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
 
         $this->validate(request(),
         [
@@ -57,9 +65,11 @@ class PostController extends Controller
         $post->body = $request->input('description');
         $post->name = Auth::user()->name;
 		$post->save();
-        return redirect()->route('posts.index');
+        return redirect()->route('artikel');
 
         }
+
+
 
     /**
      * Display the specified resource.
