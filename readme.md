@@ -1,4 +1,4 @@
-<h1 align="center"><img src=#"></h1>
+<h1 align="center"><img src="/public/images/logo.png"></h1>
 
 [Deskripsi Website](#deskripsi-website) | [Tujuan](#tujuan) | [Diagram](#diagram) | [Design pattern](#design-pattern) | [Anti Pattern](#anti-pattern) | [Lingkungan Pengembangan](#lingkungan-pengembangan) | [Pembahasan OOP](#pembahasan-oop)
 :---:|:---:|:---:|:---:|:---:|:---:|:---:
