@@ -18,6 +18,12 @@
 # Diagram
 [`^ kembali ke atas ^`](#)
 
+## Use Case Diagram
+
+## Activity Diagram
+
+## Class Diagram
+
 # Design Pattern
 [`^ kembali ke atas ^`](#)
 
@@ -45,5 +51,11 @@
 [`^ kembali ke atas ^`](#)
 
 *Objek Oriented Programing* dalam pembuatan website ini adalah sebagai berikut :
-- karena  
+- Struktur framework didalam Laravel sudah menunjukkan *Objek Oriented Programing*. Contohnya controller :
+
+
+# Saran
+[`^ kembali ke atas ^`](#)
+
+Saran untuk pengembangan website Nusantara Nature yaitu fitur-fitur didalam website masih perlu dikaji kembali, jika suatu saat ada perubahan fitur yang lebih bagus bisa dikembangkan kembali.  
 
