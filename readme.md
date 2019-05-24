@@ -16,12 +16,16 @@
 - Menyediakan layanan donasi untuk membantu menjaga kelestarian alam 
 
 # Diagram
+[`^ kembali ke atas ^`](#)
 
 # Design Pattern
+[`^ kembali ke atas ^`](#)
 
 # Anti Pattern
+[`^ kembali ke atas ^`](#)
 
 # Lingkungan Pengembangan
+[`^ kembali ke atas ^`](#)
 - Menggunakan framework laravel versi 5.7.28
 - Menggunakan PHP versi 7.0
 - Menggunakan aplikasi Visual Studio Code, Notepad ++ untuk editing program 
@@ -38,6 +42,7 @@
 
 
 # Pembahasan OOP
+[`^ kembali ke atas ^`](#)
 
 *Objek Oriented Programing* dalam pembuatan website ini adalah sebagai berikut :
 - karena  
