@@ -173,58 +173,7 @@
 		</div>		
 	</div>
 
-	<!-- Find Form -->
-
-	<!-- <div class="find">
-		 Image by https://unsplash.com/@garciasaldana_ 
-		<div class="find_background_container prlx_parent">
-			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
-		</div> -->
-		<!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
-		<!-- <div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="find_title text-center">Find the Adventure of a lifetime</div>
-				</div>
-				<div class="col-12">
-					<div class="find_form_container">
-						<form action="#" id="find_form" class="find_form d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-between justify-content-start flex-wrap">
-							<div class="find_item">
-								<div>Destination:</div>
-								<input type="text" class="destination find_input" required="required" placeholder="Keyword here">
-							</div>
-							<div class="find_item">
-								<div>Adventure type:</div>
-								<select name="adventure" id="adventure" class="dropdown_item_select find_input">
-									<option>Categories</option>
-									<option>Categories</option>
-									<option>Categories</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Min price</div>
-								<select name="min_price" id="min_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Max price</div>
-								<select name="max_price" id="max_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<button class="button find_button">Find</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	-->
+	
 	<!-- News -->
 
 	<div class="news">
@@ -237,12 +186,12 @@
 						@foreach($posts as $post)
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a href="/IsiArtikel">{{ $post->title }}</a></div>
+							<div class="post_title"><a href="/IsiArtikel/{{$post->id}}">{{ $post->title }}</a></div>
 							<div class="post_meta">
 								<ul>
 									<li><a >By {{ $post->name }}</a></li>
 									<li>{{ $post->created_at }}</li>
-									<li><a >3 comments</a></li>
+									<li><a >{{$post->comments->count()}} {{ str_plural('comment', $post->comments->count()) }}</a></li>
 								</ul>
 							</div>
 							<div class="post_image">
@@ -250,7 +199,9 @@
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div >
-								<p style="position: absolute; right:40px;"> {{ $post->body }} </p>
+								<!-- <p style="position: absolute; right:40px;"> {{ $post->body }} </p> -->
+								<p> {{ $post->body }} </p>
+								<a href="/IsiArtikel/{{$post->id}}" class="btn btn-default pull-right">Read More...</a>
 							</div>
 						</div>
 						@endforeach

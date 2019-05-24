@@ -34,14 +34,19 @@ Route::resource('camp', 'campController');
 Route::post('/post/store', 'postController@store')->name('postsstore')->middleware('auth');
 
 
-Route::get('/komunitas', 'komunitasController@index');
+Route::get('/komunitas', 'komunitasController@publicKomunitas');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku')->middleware('auth');;
 Route::resource('kom', 'komunitasController');
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7405ff313d7bd6881a0e9d54c61c29429cea69db
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
 Route::post('/tampilankom/update', 'tampilanupController@update')->name('updatekom');
 Route::get('/tampilankom/update/{id}', 'tampilanupController@index')->name('tampilanup');
+// Route::get('/IsiArtikel/{id}', 'PostsController@show')->name('posts.show');
+Route::resource('comments', 'CommentsController');

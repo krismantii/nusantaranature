@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <title>Article</title>
+<style>
+.button {
+  background: #fe435b;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/news_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="/stylesheet" type="text/css" href="/styles/news_styles.css">
+<link rel="stylesheet" type="text/css" href="/styles/news_responsive.css">
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="/styles/responsive.css">
 </head>
 <body>
+
 
 <div class="super_container">
 	
@@ -36,7 +51,7 @@
 						<div class="logo_container">
 							<div class="logo">
 								<div>Nature Nusantara</div>
-								<div class="logo_image"><img src="images/logo.png" alt=""></div>
+								<div class="logo_image"><img src="/images/logo.png" alt=""></div>
 							</div>
 						</div>
 
@@ -44,9 +59,10 @@
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="/">Home</a></li>
-								<li class="main_nav_item"><a href="artikel">Community</li>
-								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
-								<li class="main_nav_item active"><a href="artikel">Article</a></li>
+								<li class="main_nav_item"><a href="/komunitas">Community</li>
+								<li class="main_nav_item"><a href="/campaign">Campaign</a></li>
+								<li class="main_nav_item active"><a href="/artikel">Article</a></li>
+								
 								@guest
 								<li class="main_nav_item"><a href="{{ route('register') }}">Register</a></li>								
 								<li class="main_nav_item"><a href="{{ route('login') }}" >Login</a></li>
@@ -56,8 +72,10 @@
 								<button class="dropbtn">{{ Auth::user()->name }}</button>
 								
 								<div class="dropdown-content">
-  								<a href="#">profil</a>
-  								<a href="#">My Community</a>
+								<a href="/profil">Profile</a>
+  								<a href="/komunitas">Add community</a>
+								<a href="/camp">Add campaign</a>
+								<a href="/artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
   								</div>
 								</div>								
@@ -68,15 +86,6 @@
 			
 							</ul>
 						</nav>
-
-
-						<!-- Search -->
-						<div class="search">
-							<form action="#" class="search_form">
-								<input type="search" name="search_input" class="search_input ctrl_class" required="required" placeholder="Keyword">
-								<button type="submit" class="search_button ml-auto ctrl_class"><img src="images/search.png" alt=""></button>
-							</form>
-						</div>
 
 						<!-- Hamburger -->
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -102,15 +111,16 @@
 				<div class="menu_search_form_container">
 					<form action="#" id="menu_search_form">
 						<input type="search" class="menu_search_input menu_mm">
-						<button id="menu_search_submit" class="menu_search_submit" type="submit"><img src="images/search_2.png" alt=""></button>
+						<button id="menu_search_submit" class="menu_search_submit" type="submit"><img src="/images/search_2.png" alt=""></button>
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
 					<li class="menu_item menu_mm"><a href="/">Home</a></li>
+					<li class="menu_item menu_mm"><a href="komunitas">Community</a></li>
 					<li class="menu_item menu_mm"><a href="artikel">Articles</a></li>
 					<li class="menu_item menu_mm"><a href="campaign">Campaigns</a></li>
 					<li class="menu_item menu_mm"><a href="aboutUs">About Us</a></li>
-					<li class="menu_item menu_mm"><a href="contact">Contact</a></li>
+					<li class="menu_item menu_mm"><a href="contact">Contact</a></li>	
 				</ul>
 
 				<!-- Menu Social -->
@@ -136,18 +146,25 @@
 
 	<div class="home">
 		<!-- Image by https://unsplash.com/@peecho -->
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/news.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/images/news.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="home_content">
 						<div class="home_content_inner">
-							<div class="home_title">Article</div>
+							<div class="home_title">Article
+							@auth
+							<a style="position: absolute; right: 5px; background:#fe435b" href="/artpost" class="button">Add Post</a>
+							@endauth
+							</div>
 							<div class="home_breadcrumbs">
+
 								<ul class="home_breadcrumbs_list">
-									<li class="home_breadcrumb"><a href="index.html">Home</a></li>
+									<li class="home_breadcrumb"><a href="/index.html">Home</a></li>
 									<li class="home_breadcrumb">Article</li>
+								
 								</ul>
+								
 							</div>
 						</div>
 					</div>
@@ -156,61 +173,10 @@
 		</div>		
 	</div>
 
-	<!-- Find Form -->
-
-	<div class="find">
-		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="find_background_container prlx_parent">
-			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
-		</div>
-		<!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="find_title text-center">Find the Adventure of a lifetime</div>
-				</div>
-				<div class="col-12">
-					<div class="find_form_container">
-						<form action="#" id="find_form" class="find_form d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-between justify-content-start flex-wrap">
-							<div class="find_item">
-								<div>Destination:</div>
-								<input type="text" class="destination find_input" required="required" placeholder="Keyword here">
-							</div>
-							<div class="find_item">
-								<div>Adventure type:</div>
-								<select name="adventure" id="adventure" class="dropdown_item_select find_input">
-									<option>Categories</option>
-									<option>Categories</option>
-									<option>Categories</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Min price</div>
-								<select name="min_price" id="min_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Max price</div>
-								<select name="max_price" id="max_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<button class="button find_button">Find</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	
 	<!-- News -->
 
-	<div class="news">
+<div class="news">
 		<div class="container">
 			<div class="row">
 
@@ -220,135 +186,81 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title"><a>Residents Find New Habitat of Rafflesia Arnoldii in Bengkulu</a></div>
+							<div class="post_title">{{ $posts->title }}</div>
 							<div class="post_meta">
 								<ul>
-									<li><a href="#">by tempo</a></li>
-									<li>january 31, 2018</li>
-									<li><a href="#">3 comments</a></li>
+									<li><a >By {{ $posts->name }}</a></li>
+									<li>{{ $posts->created_at }}</li>
+									<li><a >{{$posts->comments->count()}} {{ str_plural('comment', $posts->comments->count()) }}</a></li>
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="images/rafflesia.jpg" style="width:852px;height:403px;">
+								<img src="/images/rafflesia.jpg" style="width:852px;height:403px;">
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
-							<div class="post_text" style="  margin-right: 5px; ">
-								<p>The Rafflesia Community in Kaur, Bengkulu, has discovered a new habitat of the rare flower Rafflesia arnoldii around Ulak Bandung village, Muara Sahung district, Kaur regency. 
-
-“We have mapped this location as a new habitat for Rafflesia arnoldii,” said the coordinator of the Padang Guci Rare Flower Care Community (KPPLG), Andri Yan, in Bengkulu on Wednesday, October 24. 
-
-Ulak Bandung village's acting head Zul Almahera has volunteered to become a guide for visitors wanting to see the rare flower. 
-
-“Since there is a corpse flower habitat, the number of visits to the location has been quite high," Yan said, adding that there were Australian tourists on Tuesday and Wednesday.</p>
-								<p>The coordinator of the Rare Flower Care Community (KPPL), Sofian Ramadhan, said the new habitat had increased the number of Rafflesia flowers' growing spots in the province.
-
-Currently, there are eight Rafflesia growing spots in Bengkulu, namely Kaur, South Bengkulu, Seluma, Kepahiang, Central Bengkulu, North Bengkulu, and Lebong and Mukomuko. 
-
-Virtually all regions in Bengkulu—except Bengkulu city—are home to natural habitats of the Rafflesia arnoldii. “That is why it is very important to preserve the forests of Bengkulu,” said Sofian. </p>
+							<div >
+								<p> {{ $posts->body }} </p>
 							</div>
 						</div>
-
-											
-
-				<!-- Sidebar 
-				 <div class="col-lg-3">
-					<div class="sidenav">
-						<div class="sidebar"> 
-
-							
-
-						 Featured Posts 
-						<div class="sidebar_featured"> 
-
-							 Featured Post
-							<div class="sidebar_featured_post">
-								<div class="sidebar_featured_image"><img src="images/sidebar_featured_1.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="#">Top destinations in Indonesia</a></div>
-								<div class="sidebar_featured_meta">
-									<ul>
-										<li><a href="#">by nana</a></li>
-										<li>january 31, 2018</li>
-										<li><a href="#">3 comments</a></li>
-									</ul>
-								</div>
-							</div>
-
-							 Featured Post 
-							<div class="sidebar_featured_post">
-								<div class="sidebar_featured_image"><img src="images/sidebar_featured_2.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
-								<div class="sidebar_featured_meta">
-									<ul>
-										<li><a href="#">by ayu</a></li>
-										<li>january 31, 2018</li>
-										<li><a href="#">3 comments</a></li>
-									</ul>
-								</div>
-							</div>
-
-							 Featured Post
-							<div class="sidebar_featured_post">
-								<div class="sidebar_featured_image"><img src="images/sidebar_featured_3.jpg" alt=""></div>
-								<div class="sidebar_featured_title"><a href="#">Best beaches in the world</a></div>
-								<div class="sidebar_featured_meta">
-									<ul>
-										<li><a href="#">by nayu</a></li>
-										<li>january 31, 2018</li>
-										<li><a href="#">3 comments</a></li>
-									</ul>
-								</div>
-							</div>
-
-						</div> -->
-
-						<!-- Offers -->
-						 <div class="sidebar_offers"> 
-
-							 Offer
-							<div class="sidebar_offer">
-								<div class="sidebar_offer_background" style="background-image:url(images/offer_1.jpg)"></div>
-								<div class="sidebar_offer_content">
-									<div class="sidebar_offer_destination">bali</div>
-									<div class="sidebar_offer_percent">38%</div>
-									<div class="sidebar_offer_title">Last Minute Offer</div>
-									<div class="sidebar_offer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris.</div>
-									<div class="sidebar_offer_button"><a href="offers.html">See Offer</a></div>
-								</div>
-							</div>
-
-							Offer 
-							<div class="sidebar_offer">
-								<div class="sidebar_offer_background" style="background-image:url(images/offer_2.jpg)"></div>
-								<div class="sidebar_offer_content">
-									<div class="sidebar_offer_destination">bali</div>
-									<div class="sidebar_offer_percent">25%</div>
-									<div class="sidebar_offer_title">Last Minute Offer</div>
-									<div class="sidebar_offer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris.</div>
-									<div class="sidebar_offer_button"><a href="offers.html">See Offer</a></div>
-								</div>
-							</div>
-
-						</div>
-
-						 Sidebar Quote 
-						<div class="sidebar_quote">
-							<div class="quote_box"><img src="images/quote.png" alt=""></div>
-							<div class="quote_text"><span>“Traveling</span> – it leaves you speechless, then turns you into a storyteller.”</div>
-						</div>
-					</div>
+						
 					</div>
 				</div>
-
-			</div>
+			
+	
+	<!-- Comments -->
+	<div class="row bootstrap snippets">
+    	<div class="col-md-6 col-md-offset-20 col-sm-12">
+        	<div class="comment-wrapper">
+            	<div class="panel panel-info">
+                	<div class="panel-heading">Comment</div>
+                	<div class="panel-body">
+						<span>{{$posts->comments->count()}} {{ str_plural('comment', $posts->comments->count()) }}</span>
+						@if (Auth::check())
+						{{ Form::open(['route' => ['comments.store'], 'method' => 'POST']) }}
+						{{ Form::hidden('post_id', $posts->id) }}  
+                   		<p>{{ Form::textarea('body', old('body')) }}</p>
+                    	<br>
+                    	<a class="button">{{ Form::submit('Post') }}</a>
+                    	<div class="clearfix"></div>
+							{{ Form::close() }}
+							@endif
+							<hr>
+							@forelse ($posts->comments as $comment)
+						<ul>
+							<li>
+								<a href="#" class="pull-left">
+									<img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+								</a>
+								<div class="media-body">
+									<span class="text-muted pull-right">
+										<small class="text-muted">{{$comment->created_at}}</small>
+									</span>
+									<strong class="text-success">{{ $comment->user->name }}</strong>
+									<p>
+									{{ $comment->body }}
+									</p>
+								</div>
+								@empty
+								<p>This post has no comments</p>
+								@endforelse
+							</li>
+						</ul>
+                	</div>
+            	</div>
+        	</div>
 		</div>
-	</div>
-
+	</div>				
+</div>		
+</div>
+</div>
+<br>
+<br>
 
 	<!-- Newsletter -->
 
 	<div class="newsletter">
 		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="newsletter_background" style="background-image:url(images/newsletter.jpg)"></div>
+		<div class="newsletter_background" style="background-image:url(/images/newsletter.jpg)"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
@@ -380,14 +292,14 @@ Virtually all regions in Bengkulu—except Bengkulu city—are home to natural h
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>destino</div>
-								<div>travel agency</div>
-								<div class="logo_image"><img src="images/logo.png" alt=""></div>
+								<div>Nature Nusantara</div>
+								
+								<div class="logo_image"><img src="/images/logo.png" alt=""></div>
 							</div>
 						</div>
-						<div class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel eleifend quis, tempus rut rum metus. Pellentesque ultricies enim eu quam fermentum hendrerit.</div>
+						<div class="footer_about_text">Nature Nusantara adalah website informasi flora dan fauna di Indonesia serta menjaring komunitas-komunitas pecinta alam diseluruh Indonesia untuk ikut andil dalam melindungi flora dan fauna di Indonesia.</div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>
@@ -400,7 +312,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 							<!-- Footer Latest Post -->
 							<div class="footer_latest_item">
-								<div class="footer_latest_image"><img src="images/latest_1.jpg" alt="https://unsplash.com/@peecho"></div>
+								<div class="footer_latest_image"><img src="/images/latest_1.jpg" alt="https://unsplash.com/@peecho"></div>
 								<div class="footer_latest_item_content">
 									<div class="footer_latest_item_title"><a href="news.html">Brazil Summer</a></div>
 									<div class="footer_latest_item_date">Jan 09, 2018</div>
@@ -409,7 +321,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 							<!-- Footer Latest Post -->
 							<div class="footer_latest_item">
-								<div class="footer_latest_image"><img src="images/latest_2.jpg" alt="https://unsplash.com/@sanfrancisco"></div>
+								<div class="footer_latest_image"><img src="/images/latest_2.jpg" alt="https://unsplash.com/@sanfrancisco"></div>
 								<div class="footer_latest_item_content">
 									<div class="footer_latest_item_title"><a href="news.html">A perfect vacation</a></div>
 									<div class="footer_latest_item_date">Jan 09, 2018</div>
@@ -443,16 +355,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/news_custom.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/styles/bootstrap4/popper.js"></script>
+<script src="/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/greensock/TweenMax.min.js"></script>
+<script src="/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/js/news_custom.js"></script>
 </body>
 </html>

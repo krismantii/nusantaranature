@@ -1,4 +1,4 @@
-<h1 align="center"><img src=#"></h1>
+<h1 align="center"><img src="/public/images/logo.png"></h1>
 
 [Deskripsi Website](#deskripsi-website) | [Tujuan](#tujuan) | [Diagram](#diagram) | [Design pattern](#design-pattern) | [Anti Pattern](#anti-pattern) | [Lingkungan Pengembangan](#lingkungan-pengembangan) | [Pembahasan OOP](#pembahasan-oop)
 :---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -16,12 +16,22 @@
 - Menyediakan layanan donasi untuk membantu menjaga kelestarian alam 
 
 # Diagram
+[`^ kembali ke atas ^`](#)
+
+## Use Case Diagram
+
+## Activity Diagram
+
+## Class Diagram
 
 # Design Pattern
+[`^ kembali ke atas ^`](#)
 
 # Anti Pattern
+[`^ kembali ke atas ^`](#)
 
 # Lingkungan Pengembangan
+[`^ kembali ke atas ^`](#)
 - Menggunakan framework laravel versi 5.7.28
 - Menggunakan PHP versi 7.0
 - Menggunakan aplikasi Visual Studio Code, Notepad ++ untuk editing program 
@@ -38,7 +48,14 @@
 
 
 # Pembahasan OOP
+[`^ kembali ke atas ^`](#)
 
 *Objek Oriented Programing* dalam pembuatan website ini adalah sebagai berikut :
-- karena  
+- Struktur framework didalam Laravel sudah menunjukkan *Objek Oriented Programing*. Contohnya controller :
+
+
+# Saran
+[`^ kembali ke atas ^`](#)
+
+Saran untuk pengembangan website Nusantara Nature yaitu fitur-fitur didalam website masih perlu dikaji kembali, jika suatu saat ada perubahan fitur yang lebih bagus bisa dikembangkan kembali.  
 
