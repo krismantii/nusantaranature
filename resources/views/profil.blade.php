@@ -1,29 +1,43 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<?php echo asset('css/profil.css')?>" type="text/css">
 <!------ Include the above in your HEAD tag ---------->
-<script src="js/bootstrap.min.js"></script>
-		<!---- Bootstrap js link local for well and modal + panels ----->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-2 col-md-2">
-            <img src="http://thetransformedmale.files.wordpress.com/2011/06/bruce-wayne-armani.jpg"
-            alt="" class="img-rounded img-responsive" />
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <blockquote>
-                <p> {{ Auth::user()->name }} </p> <small><cite title="Source Title">Gotham, United Kingdom  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
-            </blockquote>
-            <p> <i class="glyphicon glyphicon-envelope"></i> masterwayne@batman.com
-                <br
-                /> <i class="glyphicon glyphicon-globe"></i> www.bootsnipp.com
-                <br /> <i class="glyphicon glyphicon-gift"></i> January 30, 1974</p>
-        </div>
-    </div>
-</div>
-                        <div class="col-lg-7">
+</head>
+<body>
+<div class="container emp-profile">
+<button><a href="/">Home</a></button>
+            
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                       {{ Auth::user()->name }}
+                                    </h5>
+                                    <h6>
+                                        Web Developer and Designer
+                                    </h6>
+                                    <p class="proile-rating">{{ Auth::user()->email }}</span></p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div>
+                </div>
+								<div class="col-lg-7">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
 								  <li class="nav-item">
@@ -33,11 +47,8 @@
 									<a class="nav-link" data-toggle="tab" href="#campaign" role="tab">Campaign</a>
 								  </li>
 								  <li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#blogs" role="tab">Community</a>
-								  </li>	
-                                  <li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#link2" role="tab">link2</a>
-								  </li>							  
+									<a class="nav-link" data-toggle="tab" href="#komunitas" role="tab">Community</a>
+								  </li>	 
 								</ul>
 
 								<!-- Tab panes -->
@@ -51,7 +62,7 @@
 												  <h5 class="mb-1">{{ $post->title }}</h5>
 												  <small>{{ $post->created_at }}</small>
 												</div>
-												<p class="mb-1">{{ $post->body }}}</p>
+												<p class="mb-1">{{ $post->body }} <span id="dots">...</span> </p>
 												</a>
 										</div>
                                             @endforeach
@@ -72,22 +83,24 @@
 								  </div>
                                   @endforeach
 								  
-								  <div class="tab-pane" id="blogs" role="tabpanel">
+								  <div class="tab-pane" id="komunitas" role="tabpanel">
+									@foreach($komunitas as $item)
 										<div class="list-group">
 											  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
 												<div class="d-flex w-100 justify-content-between">
-												  <h5 class="mb-1">Animal Diagnostic and precautions</h5>
-												  <small>3 days ago</small>
+												  <h5 class="mb-1">{{ $item->nama }}</h5>
+												  <small>{{ $item->created_at }}</small>
 												</div>
-												<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-												<small>Donec id elit non mi porta.</small>
-												<footer class="blockquote-footer">Dr. Doctor quack quack</footer>
+												<p class="mb-1">{{ $item->deskripsi }}</p>
+												<small> {{ $item->daerah }}</small>
+											
 											  </a>
-											  	
+											  	@endforeach
 											</div>
 								  </div>
 
-                                    <div class="tab-pane" id="link2" role="tabpanel">link2</div>		  
-						        </div>
-                            </div>
-                        </div>
+                </div>
+                     
+        </div>
+</body>
+</html>

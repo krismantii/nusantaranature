@@ -23,7 +23,7 @@ class campController extends Controller
     {
         $loggedInUserId = Auth::id();
         $camps = Donate::all()->where('camp_id', $loggedInUserId);
-
+        
         return view('camp',['camps'=>$camps]);
     }
 

@@ -73,7 +73,7 @@
 								
 								<div class="dropdown-content">
 								<a href="profil">Profile</a>
-  								<a href="#">Add community</a>
+  								<a href="komunitas">Add community</a>
 								<a href="camp">Add campaign</a>
 								<a href="artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -153,7 +153,9 @@
 					<div class="home_content">
 						<div class="home_content_inner">
 							<div class="home_title">Article
+							@auth
 							<a style="position: absolute; right: 5px; background:#fe435b"href="artpost" class="button">Add Post</a>
+							@endauth
 							</div>
 							<div class="home_breadcrumbs">
 
@@ -383,14 +385,14 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>destino</div>
-								<div>travel agency</div>
+								<div>Nature Nusantara</div>
+								
 								<div class="logo_image"><img src="images/logo.png" alt=""></div>
 							</div>
 						</div>
-						<div class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel eleifend quis, tempus rut rum metus. Pellentesque ultricies enim eu quam fermentum hendrerit.</div>
+						<div class="footer_about_text">Nature Nusantara adalah website informasi flora dan fauna di Indonesia serta menjaring komunitas-komunitas pecinta alam diseluruh Indonesia untuk ikut andil dalam melindungi flora dan fauna di Indonesia.</div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>

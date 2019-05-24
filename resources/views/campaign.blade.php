@@ -57,7 +57,7 @@
 								
 								<div class="dropdown-content">
 								<a href="profil">Profile</a>
-  								<a href="#">Add community</a>
+  								<a href="komunitas">Add community</a>
 								<a href="camp">Add campaign</a>
 								<a href="artpost">Add article</a>
   								<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -70,13 +70,7 @@
 							</ul>
 						</nav>
 					
-						<!-- Search -->
-						<div class="search">
-							<form action="#" class="search_form">
-								<input type="search" name="search_input" class="search_input ctrl_class" required="required" placeholder="Keyword">
-								<button type="submit" class="search_button ml-auto ctrl_class"><img src="images/search.png" alt=""></button>
-							</form>
-						</div>
+						
 
 						<!-- Hamburger -->
 						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -310,20 +304,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col">
-					<div class="pages">
-						<ul class="pages_list">
-							<li class="page active"><a href="#">01.</a></li>
-							<li class="page"><a href="#">02.</a></li>
-							<li class="page"><a href="#">03.</a></li>
-							<li class="page"><a href="#">04.</a></li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
-	</div>
+	
 
 	<!-- Newsletter -->
 
@@ -361,14 +344,14 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<div>destino</div>
-								<div>travel agency</div>
+								<div>Nature Nusantara</div>
+								
 								<div class="logo_image"><img src="images/logo.png" alt=""></div>
 							</div>
 						</div>
-						<div class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel eleifend quis, tempus rut rum metus. Pellentesque ultricies enim eu quam fermentum hendrerit.</div>
+						<div class="footer_about_text">Nature Nusantara adalah website informasi flora dan fauna di Indonesia serta menjaring komunitas-komunitas pecinta alam diseluruh Indonesia untuk ikut andil dalam melindungi flora dan fauna di Indonesia.</div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 					</div>
 				</div>
@@ -376,7 +359,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				<!-- Footer Column -->
 				<div class="col-lg-4 footer_col">
 					<div class="footer_latest">
-						<div class="footer_title">Latest News</div>
+						<div class="footer_title">Latest Article</div>
 						<div class="footer_latest_content">
 
 							<!-- Footer Latest Post -->

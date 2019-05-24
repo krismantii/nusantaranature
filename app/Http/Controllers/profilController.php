@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Post;
 use App\Donate;
+use App\Komunitas;
 
 class profilController extends Controller
 {
@@ -14,7 +15,8 @@ class profilController extends Controller
         $loggedInUserId = Auth::id();
         $posts = Post::all()->where('user_id', $loggedInUserId);
         $camps = Donate::all()->where('camp_id', $loggedInUserId);
-
-        return view('profil',['posts'=>$posts], ['camps'=>$camps]);
+        $komunitas = Komunitas::all()->where('komunitas_id', $loggedInUserId);
+        // return $komunitas;
+        return view('profil', compact('posts','camps','komunitas'));
     }
 }

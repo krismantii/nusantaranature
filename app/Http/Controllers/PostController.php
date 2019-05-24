@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
+use Auth;
 
 class PostController extends Controller
 {
@@ -51,10 +52,10 @@ class PostController extends Controller
             'description' => 'required'
         ]);
         $post = new Post;
-        $post->user_id= Auth::user()->id;
+        $post->user_id= Auth::id();
         $post->title = $request->input('title');
         $post->body = $request->input('description');
-        $post->name = $request->input('name');
+        $post->name = Auth::user()->name;
 		$post->save();
         return redirect()->route('posts.index');
 
