@@ -238,17 +238,17 @@
 							<div class="post_title"><a href="/IsiArtikel">{{ $post->title }}</a></div>
 							<div class="post_meta">
 								<ul>
-									<li><a href="#">By {{ $post->name }}</a></li>
+									<li><a >By {{ $post->name }}</a></li>
 									<li>{{ $post->created_at }}</li>
-									<li><a href="#">3 comments</a></li>
+									<li><a >3 comments</a></li>
 								</ul>
 							</div>
 							<div class="post_image">
 								<img src="images/rafflesia.jpg" style="width:852px;height:403px;">
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
-							<div class="post_text">
-								<p> {{ $post->body }} </p>
+							<div >
+								<p style="position: absolute; right:40px;"> {{ $post->body }} </p>
 							</div>
 						</div>
 						@endforeach

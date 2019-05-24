@@ -60,9 +60,13 @@
     		        <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;"><span >*</span> - required fields</p>
     		        
     		    </div>
+
+				<form action="upload.php" method="PHP" enctype="multipart/form-data">
+					<input type="file" name="file">
+				</form>
     		    
     		    <div class="form-group">
-    		        <button type="submit" class="btn btn-primary" style="position: absolute; right:40px; background:#fe435b">
+    		        <button type="submit" class="btn btn-primary" style="position: absolute; right:40px; background:#fe435b" name="submit">
     		            Post
     		        </button>
     		        <button class="btn btn-default" style="position: absolute; right:110px; background:#dddddd" ><a href="artikel" >
