@@ -1,35 +1,61 @@
-LAPORAN AKHIR 
-PENGEMBANGAN SISTEM BERORIENTASI OBJEK
-DEPARTEMEN ILMU KOMPUTER IPB
-SEMESTER GENAP 2018/2019
+<h1 align="center"><img src="/public/images/logo.png"></h1>
 
-NAMA APLIKASI		: Nature Nusantara
-NAMA DEVELOPER		:
-ANGGOTA DEVELOPER	: Maya Maharani Krismanti - G641600
-				    : Shadiqa Arya - G641600
-                    : Husna Nurarifah - G64160048
+[Deskripsi Website](#deskripsi-website) | [Tujuan](#tujuan) | [Diagram](#diagram) | [Design pattern](#design-pattern) | [Anti Pattern](#anti-pattern) | [Lingkungan Pengembangan](#lingkungan-pengembangan) | [Pembahasan OOP](#pembahasan-oop)
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
 
-#Deskripsi Singkat Aplikasi
-Tampilkan deskripsi singkat aplikasi yang dibuat
+# Deskripsi Website
+[`^ kembali ke atas ^`](#)
+
+**Nusantara Nature** adalah sebuah website informasi tentang keberadaan flora dan fauna di seluruh Indonesia. User bisa ikut andil dalam upaya pelesatarian alam dengan donasi di campaign. User juga bisa ikut masuk komunitas atau forum-forum pecinta alam di seluruh Indonesia. Website ini bisa menjadi wadah menambah ilmu dan meningkatkan rasa kepedulian terhadap kelestarian alam khususnya di Indonesia.
+
+# Tujuan
+[`^ kembali ke atas ^`](#)
+
+- Memberikan informasi flora dan fauna di Indonesia berupa artikel
+- Sebagai sarana pencarian komunitas atau forum pecinta alam
+- Menyediakan layanan donasi untuk membantu menjaga kelestarian alam 
+
+# Diagram
+[`^ kembali ke atas ^`](#)
+
+## Use Case Diagram
+
+## Activity Diagram
+
+## Class Diagram
+
+# Design Pattern
+[`^ kembali ke atas ^`](#)
+
+# Anti Pattern
+[`^ kembali ke atas ^`](#)
+
+# Lingkungan Pengembangan
+[`^ kembali ke atas ^`](#)
+- Menggunakan framework laravel versi 5.7.28
+- Menggunakan PHP versi 7.0
+- Menggunakan aplikasi Visual Studio Code, Notepad ++ untuk editing program 
+- Menggunakan XAMPP control panel versi 3.2.2
+- Menggunakan database MySQL
+
+## Spesifikasi laptop :
+<ul>
+<li> Acer Aspire E5 475G</li>
+<li> Windows 10</li>
+<li> processor intel core i5</li>
+<li> RAM 4 GB</li>
+</ul>
 
 
-#User analysis 
-Berisi tentang:
-analisis user
-user story (gunakan format user story yang diajarkan pada saat perkuliahan. Contoh: sebagai user, saya bisa x sesuatu sehingga y)
+# Pembahasan OOP
+[`^ kembali ke atas ^`](#)
 
-#Spesifikasi teknis lingkungan pengembangan
-Tuliskan spesifikasi teknis mulai dari bahasa pemrograman, library sampai dengan database yang digunakan
+*Objek Oriented Programing* dalam pembuatan website ini adalah sebagai berikut :
+- Struktur framework didalam Laravel sudah menunjukkan *Objek Oriented Programing*. Contohnya controller :
 
 
+# Saran
+[`^ kembali ke atas ^`](#)
 
-#Hasil dan pembahasan
-Bab ini berisi:
-Pemaparan  use case diagram, use case detail description bagi setiap user story dan diagram pendukung lainnya serta hasil pertemuan dengan klien
+Saran untuk pengembangan website Nusantara Nature yaitu fitur-fitur didalam website masih perlu dikaji kembali, jika suatu saat ada perubahan fitur yang lebih bagus bisa dikembangkan kembali.  
 
-Hasil implementasi program berupa screenshoot / potongan kode program
-
-Proses Pengujian aplikasi
-
-#Saran
-Bab ini berisi tentang saran untuk pengembangan aplikasi
