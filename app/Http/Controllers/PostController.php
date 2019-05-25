@@ -60,7 +60,11 @@ class PostController extends Controller
         $post = new Post;
         $post->user_id= Auth::id();
         $post->title = $request->input('title');
+<<<<<<< HEAD
         $post->desc = $request->input('desc');
+=======
+        $post->body = $request->input('des');
+>>>>>>> 13140953d0ed435881206645cc1dcd60c588364b
         $post->name = Auth::user()->name;
         $exist = Storage::disk('local')->exists('Post',$request->input('image'));
         if($exist){
@@ -108,9 +112,23 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function update(Request $request, Post $post)
     {
         //
+=======
+    public function update(Request $request, $id)
+    {
+        $post = Post::find($id);
+
+        $visitCount = $request->visitCount;
+
+        $post->visit_count = $visitCount;
+
+        $post->save();
+
+        return redirect()->route('IsiArtikel', ['id'=>$id]);
+>>>>>>> 13140953d0ed435881206645cc1dcd60c588364b
     }
 
     /**

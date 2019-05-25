@@ -198,6 +198,7 @@
 									<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "name" }'><span>Name</span></li>
 								</ul>
 							</li>
+<<<<<<< HEAD
 							<li>
 								<span class="sorting_text">Stars</span>
 								<i class="fa fa-angle-down"></i>
@@ -236,6 +237,12 @@
 							<li>5 stars X</li>
 							<li>Romantic X</li>
 						</ul>
+=======
+							
+						</ul>
+					</div>
+					<div class="sorting_group_2 clearfix">
+>>>>>>> 13140953d0ed435881206645cc1dcd60c588364b
 						<div class="sorting_icons clearfix">
 							<div class="detail_view"><i class="fa fa-bars" aria-hidden="true"></i></div>
 							<div class="box_view"><i class="fa fa-th-large" aria-hidden="true"></i></div>
@@ -250,6 +257,7 @@
 					@foreach($camps as $camp)
 						<!-- Item -->
 						<div class="item clearfix rating_5">
+<<<<<<< HEAD
 							<div class="item_image"><img src="images/top_1.jpg" alt=""></div>
 							<div class="item_content">
 								<div class="item_price">{{ $camp->daerah }}</div>
@@ -268,6 +276,15 @@
 								</div>
 								<div class="item_text">{{ $camp->desc_camp }}</div>
 								<div class="item_more_link"><a href="#">Read More</a></div>
+=======
+							<div class="item_image"><img src="storage/{{substr($camp->foto, 7)}}" alt=""></div>
+							<div class="item_content">
+								<div class="item_price">{{ $camp->daerah }}</div>
+								<div class="item_title">{{ $camp->nama_camp }}</div>
+							
+								<div class="item_text">{{ $camp->desc_camp }}</div>
+								<div class="item_more_link"><a href="/detailcamp/{{$camp->id}}">Read More</a></div>
+>>>>>>> 13140953d0ed435881206645cc1dcd60c588364b
 							</div>
 						</div>
 					@endforeach
