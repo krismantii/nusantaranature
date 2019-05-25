@@ -38,7 +38,7 @@
 	    
 	    <div class="col-md-8 col-md-offset-2">
 	        
-    		<h1 style="position: center">Create post</h1>
+    		<h1 style="position: center">Create New Article</h1>
 			<div class="Kotak">		
     		<form action="{{ route('postsstore') }}" method="POST" enctype="multipart/form-data">
     		    {{ csrf_field() }}

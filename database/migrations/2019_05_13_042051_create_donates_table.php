@@ -19,6 +19,7 @@ class CreateDonatesTable extends Migration
             $table->string('nama_camp');
             $table->string('daerah');
             $table->text('desc_camp');
+            $table->string('foto');
             $table->timestamps();
         });
     }

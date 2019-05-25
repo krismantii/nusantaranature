@@ -28,9 +28,11 @@
 				</div>
       </div>
 			<div class="col-md-2">
-      	<input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+				
+      	<input type="submit" href="editprofil" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
       </div>
 </div>
+					<button><a href="editpost">Edit Post</a></button>
 					<div class="col-lg-7">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">

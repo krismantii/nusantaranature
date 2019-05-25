@@ -25,14 +25,14 @@ Route::get('campaign', 'campController@publicCampaign');
 Route::get('/profil', 'profilController@index')->name('profil');
 // Route::get('/artikel', 'artikelController@index')->name('artikel');
 Route::get('/artikel', 'PostController@publicArtikel')->name('artikel');
-Route::get('/detailcamp', 'detailcampController@index')->name('detailcamp');
-Route::get('/IsiArtikel/{id}', 'artikelController@showartikel')->name('IsiArtikel');
+Route::get('/detailcamp/{id}', 'detailcampController@index')->name('detailcamp');
+Route::get('/IsiArtikel/{id}', 'IsiArtikelController@showartikel')->name('IsiArtikel');
 // Route::resource('halo', 'PostController');
 Route::get('/artpost', 'artpostController@index')->name('artpost')->middleware('auth');
 Route::get('/camp', 'campController@index')->name('camp');
 Route::resource('camp', 'campController');
 Route::post('/post/store', 'postController@store')->name('postsstore')->middleware('auth');
-
+// Route::post('/post/update/{id}', 'postController@update')->name('postsupdate')->middleware('auth');
 
 Route::get('/komunitas', 'komunitasController@publicKomunitas');
 Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunitas');
@@ -42,9 +42,16 @@ Route::resource('kom', 'komunitasController');
 Route::get('file','PostController@showUploadForm')->name('upload.file'); 
 Route::get('file','PostController@storeFile');
 
+Route::get('/editprofil', 'editprofilController@index')->name('editprofil');
+Route::get('/editpost', 'editpostController@index')->name('editpost');
+
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
 Route::post('/tampilankom/update', 'tampilanupController@update')->name('updatekom');
 Route::get('/tampilankom/update/{id}', 'tampilanupController@index')->name('tampilanup');
 // Route::get('/IsiArtikel/{id}', 'PostsController@show')->name('posts.show');
 Route::resource('comments', 'CommentsController');
+
+Route::get('/detailcamp/delete/{id}', 'detailcampController@delete')->name('delete');
+Route::post('/detailcamp/update', 'updcampController@update')->name('update');
+Route::get('/detailcamp/update/{id}', 'updcampController@index')->name('updcamp');

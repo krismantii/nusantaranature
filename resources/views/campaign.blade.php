@@ -198,44 +198,10 @@
 									<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "name" }'><span>Name</span></li>
 								</ul>
 							</li>
-							<li>
-								<span class="sorting_text">Stars</span>
-								<i class="fa fa-angle-down"></i>
-								<ul>
-									<li class="item_filter_btn" data-filter="*"><span>Show All</span></li>
-									<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "stars" }'><span>Ascending</span></li>
-									<li class="item_filter_btn" data-filter=".rating_1"><span>1</span></li>
-									<li class="item_filter_btn" data-filter=".rating_2"><span>2</span></li>
-									<li class="item_filter_btn" data-filter=".rating_3"><span>3</span></li>
-									<li class="item_filter_btn" data-filter=".rating_4"><span>4</span></li>
-									<li class="item_filter_btn" data-filter=".rating_5"><span>5</span></li>
-								</ul>
-							</li>
-							<li>
-								<span class="sorting_text">Price</span>
-								<i class="fa fa-angle-down"></i>
-								<ul>
-									<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Default</span></li>
-									<li class="item_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Price</span></li>
-								</ul>
-							</li>
-							<li>
-								<span class="sorting_text">Facility</span>
-								<i class="fa fa-angle-down"></i>
-								<ul>
-									<li><span>Facility</span></li>
-									<li><span>Facility</span></li>
-									<li><span>Facility</span></li>
-								</ul>
-							</li>
+							
 						</ul>
 					</div>
 					<div class="sorting_group_2 clearfix">
-						<ul>
-							<li>Airplane X</li>
-							<li>5 stars X</li>
-							<li>Romantic X</li>
-						</ul>
 						<div class="sorting_icons clearfix">
 							<div class="detail_view"><i class="fa fa-bars" aria-hidden="true"></i></div>
 							<div class="box_view"><i class="fa fa-th-large" aria-hidden="true"></i></div>
@@ -250,24 +216,13 @@
 					@foreach($camps as $camp)
 						<!-- Item -->
 						<div class="item clearfix rating_5">
-							<div class="item_image"><img src="images/top_1.jpg" alt=""></div>
+							<div class="item_image"><img src="storage/{{substr($camp->foto, 7)}}" alt=""></div>
 							<div class="item_content">
 								<div class="item_price">{{ $camp->daerah }}</div>
 								<div class="item_title">{{ $camp->nama_camp }}</div>
-								<ul>
-									<li>1 person</li>
-									<li>4 nights</li>
-									<li>3 star hotel</li>
-								</ul>
-								<div class="rating rating_5" data-rating="5">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-								</div>
+							
 								<div class="item_text">{{ $camp->desc_camp }}</div>
-								<div class="item_more_link"><a href="#">Read More</a></div>
+								<div class="item_more_link"><a href="/detailcamp/{{$camp->id}}">Read More</a></div>
 							</div>
 						</div>
 					@endforeach

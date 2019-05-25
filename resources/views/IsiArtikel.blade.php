@@ -205,8 +205,7 @@
 						
 					</div>
 				</div>
-			
-	
+
 	<!-- Comments -->
 	<div class="row bootstrap snippets">
     	<div class="col-md-6 col-md-offset-20 col-sm-12">
@@ -354,6 +353,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 </div>
+
 
 <script src="/js/jquery-3.2.1.min.js"></script>
 <script src="/styles/bootstrap4/popper.js"></script>

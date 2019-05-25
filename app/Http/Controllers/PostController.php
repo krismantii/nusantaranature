@@ -63,6 +63,7 @@ class PostController extends Controller
         $post->user_id= Auth::id();
         $post->title = $request->input('title');
         $post->body = $request->input('description');
+        $post->visit_count = 0;
         $post->name = Auth::user()->name;
 		$post->save();
         return redirect()->route('artikel');
@@ -100,9 +101,17 @@ class PostController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+
+        $visitCount = $request->visitCount;
+
+        $post->visit_count = $visitCount;
+
+        $post->save();
+
+        return redirect()->route('IsiArtikel', ['id'=>$id]);
     }
 
     /**

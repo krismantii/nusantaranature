@@ -13,17 +13,17 @@
     <title>Tambah Komunitas</title>
 
     <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link href="/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="/css/main.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -34,13 +34,14 @@
                     <h2 class="title">Register your Campaign</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{route('camp.store')}}" class="login100-form validate-form" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('update')}}" class="login100-form validate-form" enctype="multipart/form-data">
                     @csrf    
+                    <input hidden name="id" value="{{$camp->id}}">
                         <div class="form-row">
                             <div class="name">Nama Campaign</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="nama" id="nama" required>
+                                    <input class="input--style-5" type="text" name="nama" id="nama" value="{{ $camp->nama_camp }}" required>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +49,7 @@
                             <div class="name">Daerah</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="daerah" id="daerah" required>
+                                    <input class="input--style-5" type="text" name="daerah" id="daerah" value="{{ $camp->daerah }}"required>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +58,7 @@
                             <div class="name">Deskripsi Campaigns</div>
                             <div class="value">
                                 <div class="input-group">
-                                <textarea class="form-control" cols="65" rows="5" id="deskripsi" name="deskripsi" required></textarea>
+                                <textarea class="form-control" cols="65" rows="5" id="deskripsi" name="deskripsi" required>{{ $camp->desc_camp }}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -65,13 +66,13 @@
                             <div class="name">Foto</div>
                             <div class="value">
                                 <div class="input-group">
-                                <img class="img-responsive img-cover img-center mb-2" id="preview" src="" style="max-height:400px; max-width: 400px;" >
+                                <img class="img-responsive img-cover img-center mb-2" id="preview" src="/storage/{{substr($camp->foto, 7)}}" style="max-height:400px; max-width: 400px;" >
                                 <input id="foto" class="input--style-5" type="file" name="foto" required>  
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Update</button>
                         </div>
                     </form>
                 </div>
@@ -80,14 +81,14 @@
     </div>
 
     <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/datepicker/moment.min.js"></script>
-    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="/vendor/select2/select2.min.js"></script>
+    <script src="/vendor/datepicker/moment.min.js"></script>
+    <script src="/vendor/datepicker/daterangepicker.js"></script>
 
     <!-- Main JS-->
-    <script src="js/global.js"></script>
+    <script src="/js/global.js"></script>
 
     <!-- FOTO PREVIEW-->
     <script type="text/javascript">
