@@ -39,41 +39,46 @@
 	    <div class="col-md-8 col-md-offset-2">
 	        
     		<h1 style="position: center">Create New Article</h1>
-			<div class="Kotak">		
-    		<form action="{{ route('postsstore') }}" method="POST" enctype="multipart/form-data">
-    		    {{ csrf_field() }}
-    		    <div class="form-group">
-    		        <label style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;" for="title"> Title <span class="require">*</span></label>
-    		        <input type="text" class="form-control" name="title" />
-    		    </div>
-    		    
-    		    <div class="form-group">
-    		        <label style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;" for="description">Description</label>
-    		        <textarea rows="5" class="form-control" name="description" ></textarea>
-    		    </div>
-    		    
-    		    <div class="form-group">
-    		        <p style="font-family: 'Montserrat', sans-serif; font-size: 14px; color: #ffffff;"><span >*</span> - required fields</p>
-    		        
-    		    </div>
+			<div class="Kotak">	
 
-					<input type="file" name="file">
-    		    
-    		    <div class="form-group">
-    		        <button type="submit" class="btn btn-primary" style="position: absolute; right:40px; background:#fe435b" name="submit">
-    		            Post
-    		        </button>
-    		        <button class="btn btn-default" style="position: absolute; right:110px; background:#dddddd" ><a href="artikel" >
-    		            Discard
-                    </a>
-    		        </button>
-    		    </div>
 
-    		</form>
+			<form action="{{ route('postsstore') }}" method="post" enctype="multipart/form-data">
+				{{ csrf_field() }}
+				<div class="form-group has-feedback{{ $errors->has('title') ? ' has error ' : ''}}" style="width:300px">
+					<label for="">Title</label>
+					<input type="text" class="form-control" name="title" placeholder="Post title" value="{{ old('title') }}">
+					@if($errors->has('title'))
+						<span class="help-block">
+							<p>{{ $errors->first('title')}}</p>
+						</span>
+					@endif
+				</div>
+
+
+				<div class="form-group has-feedback{{ $errors->has('content') ? ' has error ' : ''}}" style="width:700px">
+					<label for="">Content</label>
+					<textarea name="desc" id="" rows="9" class="form-control" placeholder="Post content">{{ old('content') }}</textarea>
+					@if($errors->has('content'))
+						<span class="help-block">
+							<p>{{ $errors->first('content')}}</p>
+						</span>
+					@endif           
+				</div>
+
+				<div class="form-group has-feedback{{ $errors->has('image') ? ' has error ' : ''}}" style="width:700px">
+					<label for="">Image</label>
+					<input type="file" name="image">
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Save</button>
+				</div>
+			</form>
+
+
 			</div>
 		</div>
 		
 	</div>
-</div>
 </div>
 </body>

@@ -195,7 +195,7 @@
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="images/rafflesia.jpg" style="width:852px;height:403px;">
+								<img src="{{asset($post->image)}}" style="width:852px;height:403px;">
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div >

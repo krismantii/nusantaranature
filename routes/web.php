@@ -39,11 +39,9 @@ Route::get('/addkomunitas', 'komunitasController@tampilanadd')->name('addkomunit
 Route::post('/addkomunitasku','komunitasController@add')->name('addkomunitasku')->middleware('auth');;
 Route::resource('kom', 'komunitasController');
 
-Route::get('file','PostController@showUploadForm')->name('upload.file'); 
-Route::get('file','PostController@storeFile');
-
 Route::get('/editprofil', 'editprofilController@index')->name('editprofil');
 Route::get('/editpost', 'editpostController@index')->name('editpost');
+
 
 Route::get('/tampilankom/{id}', 'tampilankomController@index')->name('tampilankom');
 Route::get('/tampilankom/delete/{id}', 'tampilankomController@delete')->name('deletekom');
