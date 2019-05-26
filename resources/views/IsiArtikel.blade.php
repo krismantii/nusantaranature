@@ -146,24 +146,16 @@
 
 	<div class="home">
 		<!-- Image by https://unsplash.com/@peecho -->
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/images/news.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/images/gunung.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="home_content">
 						<div class="home_content_inner">
-							<div class="home_title">Article
-							@auth
-							<a style="position: absolute; right: 5px; background:#fe435b" href="/artpost" class="button">Add Post</a>
-							@endauth
-							</div>
+							
 							<div class="home_breadcrumbs">
 
-								<ul class="home_breadcrumbs_list">
-									<li class="home_breadcrumb"><a href="/index.html">Home</a></li>
-									<li class="home_breadcrumb">Article</li>
 								
-								</ul>
 								
 							</div>
 						</div>
@@ -172,9 +164,11 @@
 			</div>
 		</div>		
 	</div>
-
-	
 	<!-- News -->
+
+<br>
+<br>
+<br>
 
 <div class="news">
 		<div class="container">
@@ -186,26 +180,28 @@
 						
 						<!-- News Post -->
 						<div class="news_post">
-							<div class="post_title">{{ $posts->title }}</div>
+							<div class="post_title" style="font-size: 32px;">{{ $posts->title }}</div>
+							
 							<div class="post_meta">
 								<ul>
-									<li><a >By {{ $posts->name }}</a></li>
-									<li>{{ $posts->created_at }}</li>
-									<li><a >{{$posts->comments->count()}} {{ str_plural('comment', $posts->comments->count()) }}</a></li>
+									<a >By {{ $posts->name }}</a> |
+									{{ $posts->created_at }} |
+									<a>{{$posts->comments->count()}} {{ str_plural('comment', $posts->comments->count()) }}</a>
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="/images/rafflesia.jpg" style="width:852px;height:403px;">
+								<img src="{{asset($posts->image)}}" style="width:852px;height:403px;">
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div >
-								<p> {{ $posts->body }} </p>
+								<p> {{ $posts->desc }} </p>
 							</div>
 						</div>
 						
 					</div>
 				</div>
-
+			
+	
 	<!-- Comments -->
 	<div class="row bootstrap snippets">
     	<div class="col-md-6 col-md-offset-20 col-sm-12">
@@ -353,7 +349,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 </div>
-
 
 <script src="/js/jquery-3.2.1.min.js"></script>
 <script src="/styles/bootstrap4/popper.js"></script>

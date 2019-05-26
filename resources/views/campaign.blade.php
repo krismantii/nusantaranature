@@ -115,7 +115,7 @@
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="/">Home</a></li>
+					<li class="menu_item menu_mm"><a href="/home">Home</a></li>
 					<li class="menu_item menu_mm"><a href="artikel">Articles</a></li>
 					<li class="menu_item menu_mm"><a href="campaign">Campaigns</a></li>
 					<li class="menu_item menu_mm"><a href="aboutUs">About Us</a></li>
@@ -216,7 +216,7 @@
 					@foreach($camps as $camp)
 						<!-- Item -->
 						<div class="item clearfix rating_5">
-							<div class="item_image"><img src="storage/{{substr($camp->foto, 7)}}" alt=""></div>
+							<div class="item_image"><img src="public/{{substr($camp->foto, 7)}}" alt=""></div>
 							<div class="item_content">
 								<div class="item_price">{{ $camp->daerah }}</div>
 								<div class="item_title">{{ $camp->nama_camp }}</div>

@@ -51,7 +51,7 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-                            <li class="main_nav_item"><a href="/">Home</a></li>
+                            <li class="main_nav_item"><a href="/home">Home</a></li>
 								<li class="main_nav_item active"><a href="komunitas">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
@@ -187,7 +187,7 @@
     @foreach($komunitas as $item)
         <div class="col-auto mb-3">
             <div class="card" style="width: 18rem;">
-            <img class="card-img-top" style="width: 286px; height: 200px" src="storage/{{substr($item->foto, 7)}}" alt="Card image cap">
+            <img class="card-img-top" style="width: 286px; height: 200px" src="public/{{substr($item->foto, 7)}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{$item->nama}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{$item->daerah}}</h6>

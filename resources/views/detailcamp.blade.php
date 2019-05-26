@@ -87,7 +87,7 @@
 				<div class="row">
 					<div class="col-xl-6 p-0">
 						<div class="gallery-single-slider owl-carousel">
-							<img src="/storage/{{substr($camp->foto, 7)}}" alt="">
+							<img src="/public/{{substr($camp->foto, 7)}}" alt="">
 							
 						</div>
 					</div>

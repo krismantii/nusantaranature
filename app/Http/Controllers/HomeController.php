@@ -3,26 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use App\Donate;
+use App\Komunitas;
+use Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('index');
+        $loggedInUserId = Auth::id();
+        $posts = Post::all()->where('user_id', $loggedInUserId);
+        $camps = Donate::all()->where('camp_id', $loggedInUserId);
+        $komunitas = Komunitas::all()->where('komunitas_id', $loggedInUserId);
+        return view('index', compact('posts','camps','komunitas'));
     }
 }

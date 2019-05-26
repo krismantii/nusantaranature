@@ -60,8 +60,9 @@ class PostController extends Controller
         $post = new Post;
         $post->user_id= Auth::id();
         $post->title = $request->input('title');
-        $post->body = $request->input('des');
+        $post->desc = $request->input('desc');
         $post->name = Auth::user()->name;
+        $post->visit_count = 0;
         $exist = Storage::disk('local')->exists('Post',$request->input('image'));
         if($exist){
             Storage::disk('local')->delete('Post',$request->input('image'));

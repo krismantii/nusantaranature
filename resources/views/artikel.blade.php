@@ -58,7 +58,7 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="/">Home</a></li>
+								<li class="main_nav_item"><a href="/home">Home</a></li>
 								<li class="main_nav_item"><a href="komunitas">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item active"><a href="artikel">Article</a></li>
@@ -146,7 +146,7 @@
 
 	<div class="home">
 		<!-- Image by https://unsplash.com/@peecho -->
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/rafflesia.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/gunung.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -195,13 +195,13 @@
 								</ul>
 							</div>
 							<div class="post_image">
-								<img src="{{asset($post->image)}}" style="width:852px;height:403px;">
+								<img src="{{asset($post->image)}}">
 								<!-- <a href="#"><div class="post_image_box text-center">+</div></a> -->
 							</div>
 							<div >
 								<!-- <p style="position: absolute; right:40px;"> {{ $post->body }} </p> -->
-								<p> {{ $post->body }} </p>
-								<a href="/IsiArtikel/{{$post->id}}" class="btn btn-default pull-right">Read More...</a>
+								<p> {{ $post->desc }} </p>
+							
 							</div>
 						</div>
 						@endforeach
@@ -358,7 +358,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="footer_latest_item">
 								<div class="footer_latest_image"><img src="images/latest_1.jpg" alt="https://unsplash.com/@peecho"></div>
 								<div class="footer_latest_item_content">
-									<div class="footer_latest_item_title"><a href="news.html">Brazil Summer</a></div>
+									<div class="footer_latest_item_title"><a href="news.html">Sumatera Summer</a></div>
 									<div class="footer_latest_item_date">Jan 09, 2018</div>
 								</div>
 							</div>

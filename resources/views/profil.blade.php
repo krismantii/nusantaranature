@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container emp-profile">
-		<button><a href="/">Home</a></button>
+		<button><a href="/home">Home</a></button>
 			<div class="row">
 				<div class="col-md-4">
         	<div class="profile-img">

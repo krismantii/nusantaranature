@@ -38,7 +38,7 @@
 						<!-- Main Navigation -->
 						<nav class="main_nav ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item active"><a href="/">Home</a></li>
+								<li class="main_nav_item active"><a href="/home">Home</a></li>
 								<li class="main_nav_item"><a href="komunitas">Community</li>
 								<li class="main_nav_item"><a href="campaign">Campaign</a></li>
 								<li class="main_nav_item"><a href="artikel">Article</a></li>
@@ -159,22 +159,7 @@
 									<option>Fauna</option>
 								</select>
 							</div>
-							<div class="find_item">
-								<div>Min price</div>
-								<select name="min_price" id="min_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Max price</div>
-								<select name="max_price" id="max_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
+							
 							<button class="button find_button">Find</button>
 						</form>
 					</div>
@@ -191,7 +176,7 @@
 				<div class="col">
 					<div class="section_title text-center">
 						<h2>HOT ARTICLE</h2>
-						<div>take a look at these offers</div>
+						<div>take a look at these article</div>
 					</div>
 				</div>
 			</div>
@@ -200,15 +185,17 @@
 					<div class="popular_content d-flex flex-md-row flex-column flex-wrap align-items-md-center align-items-start justify-content-md-between justify-content-start">
 						
 						<!-- Popular Item -->
+						@foreach($posts as $post)
 						<div class="popular_item">
 							<a href="offers.html">
 								<img src="images/popular_1.jpg" alt="image by Egzon Bytyqi">
 								<div class="popular_item_content">
-									<div class="popular_item_price">THE BEST VIEW IN JAKARTA</div>
-									<div class="popular_item_title">Jakarta</div>
+									<div class="popular_item_price">{{ $post->title }}</div>
+									<div class="popular_item_title">{{ $post->name }}</div>
 								</div>
 							</a>	
 						</div>
+						@endforeach
 
 						<!-- Popular Item -->
 						<div class="popular_item">
@@ -255,16 +242,18 @@
 				<div class="col-lg-3 col-md-6 top_col">
 
 					<!-- Top Destination Item -->
+					@foreach($camps as $camp)
 					<div class="top_item">
 						<a href="#">
 							<div class="top_item_image"><img src="images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
 							<div class="top_item_content">
-								<div class="top_item_price">From $890</div>
-								<div class="top_item_text">Paris, France</div>
+								<div class="top_item_price">{{ $camp->daerah }}</div>
+								<div class="top_item_text">{{ $camp->nama_camp }}</div>
 								<div class="button last_button" style="text-align: center"><a href="offers.html" >Join</a></div>
 							</div>
 						</a>
 					</div>
+					@endforeach
 				</div>
 
 				<div class="col-lg-3 col-md-6 top_col">
