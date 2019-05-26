@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<?php echo asset('css/profil.css')?>" type="text/css">
 <!------ Include the above in your HEAD tag ---------->
 </head>
-<body>
+<body style="background-image: url('images/gunung.jpg');">
 <div class="container emp-profile">
 		<button><a href="/home">Home</a></button>
 			<div class="row">
@@ -28,11 +28,9 @@
 				</div>
       </div>
 			<div class="col-md-2">
-				
-      	<input type="submit" href="editprofil" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+      	<input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
       </div>
 </div>
-					<button><a href="editpost">Edit Post</a></button>
 					<div class="col-lg-7">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">

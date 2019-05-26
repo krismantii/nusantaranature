@@ -216,13 +216,38 @@
 					@foreach($camps as $camp)
 						<!-- Item -->
 						<div class="item clearfix rating_5">
+<<<<<<< HEAD
 							<div class="item_image"><img src="public/{{substr($camp->foto, 7)}}" alt=""></div>
+=======
+<<<<<<< HEAD
+							<div class="item_image"><img src="images/top_1.jpg" alt=""></div>
+							<div class="item_content">
+								<div class="item_price">{{ $camp->daerah }}</div>
+								<div class="item_title">{{ $camp->nama_camp }}</div>
+								<ul>
+									<li>1 person</li>
+									<li>4 nights</li>
+									<li>3 star hotel</li>
+								</ul>
+								<div class="rating rating_5" data-rating="5">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="item_text">{{ $camp->desc_camp }}</div>
+								<div class="item_more_link"><a href="#">Read More</a></div>
+=======
+							<div class="item_image"><img src="storage/{{substr($camp->foto, 7)}}" alt=""></div>
+>>>>>>> 33087655617a591ad341c9779c5b2ad741519111
 							<div class="item_content">
 								<div class="item_price">{{ $camp->daerah }}</div>
 								<div class="item_title">{{ $camp->nama_camp }}</div>
 							
 								<div class="item_text">{{ $camp->desc_camp }}</div>
 								<div class="item_more_link"><a href="/detailcamp/{{$camp->id}}">Read More</a></div>
+>>>>>>> 13140953d0ed435881206645cc1dcd60c588364b
 							</div>
 						</div>
 					@endforeach

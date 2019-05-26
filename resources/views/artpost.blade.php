@@ -38,14 +38,14 @@
 	    
 	    <div class="col-md-8 col-md-offset-2">
 	        
-    		<h1 style="position: center">Create New Article</h1>
+    		<h1 style="position: center">Create post</h1>
 			<div class="Kotak">	
 
 
 			<form action="{{ route('postsstore') }}" method="post" enctype="multipart/form-data">
 				{{ csrf_field() }}
 				<div class="form-group has-feedback{{ $errors->has('title') ? ' has error ' : ''}}" style="width:300px">
-					<label for="">Title</label>
+					<label for="" style="color: #ffffff; font: Montserrat, sans serif;">Title</label>
 					<input type="text" class="form-control" name="title" placeholder="Post title" value="{{ old('title') }}">
 					@if($errors->has('title'))
 						<span class="help-block">
@@ -56,7 +56,7 @@
 
 
 				<div class="form-group has-feedback{{ $errors->has('content') ? ' has error ' : ''}}" style="width:700px">
-					<label for="">Content</label>
+					<label for="" style="color: #ffffff; font: Montserrat, sans serif;">Content</label>
 					<textarea name="desc" id="" rows="9" class="form-control" placeholder="Post content">{{ old('content') }}</textarea>
 					@if($errors->has('content'))
 						<span class="help-block">
@@ -66,7 +66,7 @@
 				</div>
 
 				<div class="form-group has-feedback{{ $errors->has('image') ? ' has error ' : ''}}" style="width:700px">
-					<label for="">Image</label>
+					<label for="" style="color: #ffffff; font: Montserrat, sans serif;">Image</label>
 					<input type="file" name="image">
 				</div>
 
